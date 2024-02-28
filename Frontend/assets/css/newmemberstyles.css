@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+  background-color: lightgrey
+  
+}
+h2{
+  font-size: 50px
+}
+.logo-container{
+  padding-top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px;
+  border: 7px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  background-color: whitesmoke
+}
+
+label {
+  font-size: 25px;
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=button] {
+  padding-left: 2000px;
+  background-color: black;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: ease 1s;
+}
+
+input[type=button]:hover {
+  background-color: red;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: ;
+  padding: 10px;
+  padding-bottom: 0px;
+  
+}
+
+.col-25 {
+  float: left;
+  width: 10%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
