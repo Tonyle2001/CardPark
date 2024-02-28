@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *{
 	margin: 0;
 	padding: 0;
@@ -32,14 +33,88 @@ body{
   background: #fff;
   width: 500px;
   margin: 65px auto;
-  display: flex;
-  border-radius: 4px;
-  box-shadow: 0 2px 25px rgba(0, 0, 0, 0.2);
+=======
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #D80000; /* Adjust background color as needed */
+>>>>>>> 0f526822d1300d2ee7ecbc913a741df618d0c907
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+<<<<<<< HEAD
 .login-form .content {
   padding: 30px;
+=======
+
+.centered-container {
+ 
+>>>>>>> 0f526822d1300d2ee7ecbc913a741df618d0c907
   text-align: center;
+  max-width: 320px; /* Adjust width as needed */
 }
+
+.logo-container img {
+  max-width: 250px; /* Adjust based on your logo size */
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center
+}
+
+#login-container {
+  background-color: white;
+  padding: 0px;
+  border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input-wrapper {
+  margin-bottom: 18px;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 90%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 3px solid #ccc;
+  border-radius: 40px;
+}
+
+.form-actions {
+  margin-top: 57px;
+  margin-bottom: 60px
+}
+
+button {
+  width: 90%;
+  padding: 10px;
+  border: none;
+  border-radius: 40px;
+  background-color: #333;
+  color: white;
+  margin-bottom: 10px; /* Add space between buttons */
+  
+}
+
+
+button:hover {
+  background-color: #555;
+}
+
+@media (max-width: 480px) {
+  .centered-container {
+    width: 90%;
+  }
+}
+<<<<<<< HEAD
 .login-form .input-field {
   padding: 12px 5px;
 }
@@ -141,3 +216,5 @@ body{
   margin-right: auto;
   width: 50%;
 }
+=======
+>>>>>>> 0f526822d1300d2ee7ecbc913a741df618d0c907

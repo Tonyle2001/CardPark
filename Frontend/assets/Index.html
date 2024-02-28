@@ -1,39 +1,56 @@
-<! doctype html>
-<html lang= "en-US">
-	<head>
-		<meta charset="utf-8"/>
-		<link rel="icon" type="image/x-icon" href="images/image-removebg-preview.png">
-		<title>CardPark Login</title>
-		<link rel="stylesheet" href="css/styles.css">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	</head>
-	
-	<body>
-		<div class="top">
-			<div><img class="logo" src="images/image-removebg-preview.png" alt="logo"></div>
-			<div><h1>Welcome To CardPark</h1></div>
-		</div>
-		
-		<div class="login-form">
-			<form>				
-				<div class="content">
-					<div class="input-field">
-						<input type="email" id placeholder="NCC Email" autocomplete="nope">
-					</div>
-					<div class ="input-field">
-						<input type="password" placeholder="Password" autocomplete="new-password">
-					</div>			
-				</div>
-				
-				<div class="action">
-					<div class="new-member">
-						<button>New Member</button>
-					</div>
-					<div class="sign-in">
-						<button>Sign In</button>
-					</div>
-				</div>
-			</form>
-		</div>
-	</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Welcome to CardPark</title>
+  
+  <link rel="stylesheet" href="assets/css/styles.css">
+  
+</head>
+
+<body>
+
+  <div class="centered-container">
+  
+    <!-- Logo Image -->
+    <div class="logo-container">
+      <img src="logo.png" alt="CardPark Logo" />
+    </div>
+
+    <!-- Login Container -->
+    <div id="login-container">
+    
+      <h1>Welcome to CardPark</h1>
+      
+      <form id="login-form">
+      
+        <div class="input-wrapper">
+        
+          <label for="email">NCC Email:</label>
+          
+          <input type="email" id="email" name="email" required>
+          
+        </div>
+        
+        <div class="input-wrapper">
+        
+          <label for="password">Password:</label>
+          
+          <input type="password" id="password" name="password" required>
+          
+        </div>
+        
+        <div class="form-actions">
+        
+          <button type="submit">Login</button>
+          
+          <button type="button" id="new-member">New Member</button>
+          
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
 </html>
