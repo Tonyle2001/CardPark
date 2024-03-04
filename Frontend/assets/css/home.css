@@ -17,7 +17,7 @@
 }
 .sidenav-logo-container{
   position:fixed;
-  
+  margin:auto;
 }
 
 .sidenav a {
@@ -60,7 +60,8 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: auto;
-  width: 40%;
+  width: 50%;
+  height: auto;
   overflow: auto;
   scrollbar-width: none;
   touch-action: manipulation;
