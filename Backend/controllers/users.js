@@ -3,10 +3,6 @@
 var dbConn  = require('../lib/db');
 let bcrypt = require('bcrypt');
 
-function test(req,res){
-    res.status(200).send({message:'Message controller'});
-}
-
 function getAll(req, res) {
 
     dbConn.query('SELECT * FROM Users',function(err,users){
@@ -28,7 +24,7 @@ function getByID(req, res) {
         if(err) {
           res.status(500).send({ message: err.message });
         } else {
-          res.status(200).send({ users:result });
+            res.status(200).send({ users:result });
         }
     });
   }
@@ -45,7 +41,7 @@ function addUser(req, res) {
 
     const saltRounds = 10;
     bcrypt.hash(password, saltRounds).then(hash => {
-    console.log(`Hash: ${hash}`);
+
     var sql = "INSERT INTO  users (UID, Fname, Lname, email, passwrd) VALUES (?, ?, ?, ?, ?)"
     
     // insert query
@@ -85,7 +81,9 @@ function updateUser(req, res) {
 
 function deleteByID(req, res) {
 
-    let uid = req.params.uid;
+    let params = req.body;
+
+    let uid = params.uid;
 
     dbConn.query('DELETE FROM Users WHERE uid = ?', uid, function(err, result) {
       //if(err) throw err
@@ -113,7 +111,7 @@ function Login(req, res) {
             } else {
                 bcrypt.compare(password, user[0].passwrd, (err, check) =>{
                     if(check){
-                        res.status(200).send('Login successful');
+                        res.status(200).send({ user:user[0].uid });
                     } else {
                         res.send('Incorrect password');
                     }
@@ -124,7 +122,6 @@ function Login(req, res) {
 }
 
 module.exports = {
-    test,
     getAll,
     getByID,
     addUser,
