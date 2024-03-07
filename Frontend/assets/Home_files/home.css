@@ -80,13 +80,12 @@
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   background-color: #5550;
-  color: red;
-  font-size: 16px;
   padding: 12px 24px;
   border: none;
   cursor: pointer;
   border-radius: 5px;
   transition-duration: 0.3s;
+  text-indent: -9999px;
 }
 .container .btn:hover{
     background: rgba(255, 255, 0,0.5);
