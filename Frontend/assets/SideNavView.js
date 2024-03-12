@@ -1,9 +1,9 @@
 
-var HomeView = (function() {
+var sidNavView = (function() {
 
     function updateSidebar() {
     
-        var isOpen = HomeModel.getSidebarState();
+        var isOpen = sideNavModel.getSidebarState();
         
         document.getElementById("mySidenav").style.width = isOpen ? "250px" : "0";
         
