@@ -1,5 +1,5 @@
 
-var HomeModel = (function() {
+var sideNavModel = (function() {
 
     var sidebarState = false; // false means closed, true means open
 
