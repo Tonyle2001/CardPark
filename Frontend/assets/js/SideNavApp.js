@@ -1,13 +1,13 @@
 
-var HomeApp = (function() {
+var sideNavApp = (function() {
 
     function toggleNav() {
     
-        var currentState = HomeModel.getSidebarState();
+        var currentState = sideNavModel.getSidebarState();
         
-        HomeModel.setSidebarState(!currentState);
+        sideNavModel.setSidebarState(!currentState);
         
-        HomeView.updateSidebar();
+        sideNavView.updateSidebar();
     }
 
     return {
