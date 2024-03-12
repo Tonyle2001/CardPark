@@ -1,8 +1,15 @@
-body {
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    height: 100%;
 }
 
 .container {
@@ -104,6 +111,7 @@ button:hover {
     transition: margin-left .5s;
     padding: 16px;
     background-color: #cc0000;
+    min-height: 100vh; /* Make main take the full viewport height */
 }
 
 .openbtn {
