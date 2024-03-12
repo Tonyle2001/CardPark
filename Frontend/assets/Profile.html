@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="assets/css/profilestyles.css">
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  
+    <a href="javascript:void(0)" class="closebtn">&times;</a>
+  
+    <a href="profile.html">Profile</a>
+  
+    <a href="Home.html">Home</a>
+  
+    <a href="#">Cancel</a>
+  
+    <a href="Settings.html">Settings</a>
+  
+    <a href="Report.html">Report</a>
+</div>
+
+<div id="main">
+    <button class="openbtn">☰</button>  
+
+    <div class="container">
+      
+        <header>
+            <h1>User Profile</h1>
+          
+        </header>
+        <div class="content">
+            <p class="info"><strong>First Name:</strong> John</p>
+          
+            <p class="info"><strong>Last Name:</strong> Doe</p>
+          
+            <p class="info"><strong>Email:</strong> johndoe@example.com</p>
+          
+            <p class="info"><strong>User ID:</strong> 12345</p>
+            
+            <h2>Vehicle Information</h2>
+            <form id="vehicleForm">
+              
+                <input type="text" id="carMake" name="carMake" placeholder="Car Make">
+              
+                <input type="text" id="carModel" name="carModel" placeholder="Car Model">
+              
+                <input type="text" id="carColor" name="carColor" placeholder="Car Color">
+              
+                <input type="text" id="carYear" name="carYear" placeholder="Car Year">
+              
+                <input type="text" id="carLicensePlate" name="carLicensePlate" placeholder="Car License Plate">
+              
+                <button type="button">Submit</button>
+              
+            </form>
+          
+            <p id="vehicleInfo"></p>
+        </div>
+    </div>
+</div>
+
+<script type= "text/javascript" src="assets/js/profileModel.js"></script>
+<script type= "text/javascript" src="assets/js/profileView.js"></script>
+<script type= "text/javascript" src="assets/js/profileListeners.js"></script>
+<script type= "text/javascript" src="assets/js/profileApp.js"></script>
+</body>
+</html>
+
