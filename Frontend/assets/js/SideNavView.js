@@ -1,5 +1,5 @@
 
-var sidNavView = (function() {
+var sideNavView = (function() {
 
     function updateSidebar() {
     
