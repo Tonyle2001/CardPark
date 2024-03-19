@@ -2,6 +2,7 @@
 
 var dbConn  = require('../lib/db');
 let bcrypt = require('bcrypt');
+const { param } = require('../routes');
 
 function getAll(req, res) {
 
@@ -60,7 +61,7 @@ function updateUser(req, res) {
 
     let params = req.body;
   
-    let uid = req.params.id;
+    let uid = params.id;
     let fname = params.fname;
     let lname = params.lname;
     let email = params.email;
@@ -77,6 +78,54 @@ function updateUser(req, res) {
             res.status(200).send( { user:result } );
             }
     });
+}
+
+function changePassword(req, res){
+    
+    let params = req.body;
+    
+    let uid = params.uid;
+    let old_password = params.old_password;
+    let new_password = params.new_password;
+    let confirm = params.confirm;
+    
+    const saltRounds = 10;
+
+    if(new_password == confirm){
+        dbConn.query('SELECT uid, passwrd FROM Users WHERE uid = ?', uid, function(err, user){
+            if(err) {
+            res.status(500).send({ message: err.message });
+            } else {
+                if(!user){
+                    res.status(404).send({ message: 'User does not exist'});
+                } else {
+                    bcrypt.compare(old_password, user[0].passwrd, (err, check) =>{
+                        if(check){
+                            bcrypt.hash(new_password, saltRounds).then(hash => {
+
+                                var sql = "UPDATE Users SET passwrd = ? WHERE uid = ?"
+        
+                                // insert query
+                                dbConn.query(sql, [hash, uid], function(err, result) {
+                                //if(err) throw err
+                                if (err) {
+                                    res.status(500).send({ message: err.message });
+                                } else {
+                                    res.status(200).send( { user:result } );
+                                    }
+                                });
+                                    }).catch(err => console.error(err.message));
+                        } else {
+                            res.send('Incorrect old password');
+                        }
+                    });
+                }
+            }
+        });
+    }
+    else{
+        res.send('Passwords do not match');
+    }
 }
 
 function deleteByID(req, res) {
@@ -126,6 +175,7 @@ module.exports = {
     getByID,
     addUser,
     updateUser,
+    changePassword,
     deleteByID,
     Login
 }

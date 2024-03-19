@@ -30,50 +30,26 @@ function getByUID(req, res) {
 
 function addReservation(req, res) {
     
-    var date = new Date();
     let params = req.body;
   
     let uid = params.uid;
     let lid = params.lid;
     let spot = params.spot;
     let check_in = false;
-    let arrv_time = date.toLocaleString();
+    let start_time = params.start_time;
+    let end_time = params.end_time;
 
 
-    var sql = "INSERT INTO  reservations (arrv_time, check_in, UID, LID, spot_num) VALUES (?, ?, ?, ?, ?)"
+    var sql = "INSERT INTO  reservations (start_time, end_time, check_in, UID, LID, spot_num) VALUES (?, ?, ?, ?, ?, ?)"
     
     // insert query
-    dbConn.query(sql, [arrv_time, check_in, uid, lid, spot], function(err, result) {
+    dbConn.query(sql, [start_time, end_time, check_in, uid, lid, spot], function(err, result) {
     //if(err) throw err
     if (err) {
         res.status(500).send({ message: err.message });
     } else {
         res.status(200).send( { reservation:result } );
         }
-    });
-}
-
-function updateReservation(req, res) {
-
-    var date = new Date();
-    let params = req.body;
-    
-    let uid = params.uid;
-    let lid = params.lid;
-    let spot = params.spot_num;
-    let arrv_time = date.toLocaleTimeString();
-  
-  
-    var sql = "UPDATE reservations SET arrv_time = ?, lid = ?, spot = ? WHERE uid = ?"
-    
-    // update query
-    dbConn.query(sql, [arrv_time, lid, spot, uid], function(err, result) {
-        //if(err) throw err
-        if (err) {
-          res.status(500).send({ message: err.message });
-          } else {
-            res.status(200).send( { reservation:result } );
-            }
     });
 }
 
@@ -91,6 +67,17 @@ function deleteByUID(req, res) {
           res.status(200).send( { reservation:result } );
           }
     });
+}
+
+function deleteAll(req, res){
+    dbConn.query('TRUNCATE TABLE reservations', function(err, result) {
+        //if(err) throw err
+        if (err) {
+          res.status(500).send({ message: err.message });
+          } else {
+            res.status(200).send( { result:console.log("Completed!") } );
+            }
+      }); 
 }
 
 function check_in(req, res) {
@@ -116,7 +103,7 @@ module.exports = {
     getAll,
     getByUID,
     addReservation,
-    updateReservation,
     deleteByUID,
+    deleteAll,
     check_in
 }

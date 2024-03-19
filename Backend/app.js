@@ -11,8 +11,10 @@ var connection  = require('./lib/db');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var reservationsRouter = require('./routes/reservations')
-var parkingspotsRouter = require('./routes/parkingspots')
+var reservationsRouter = require('./routes/reservations');
+var parkingspotsRouter = require('./routes/parkingspots');
+var vehiclesRouter = require('./routes/vehicles');
+
 
 
 var cors = require('cors');
@@ -47,7 +49,13 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/reservations', reservationsRouter);
 app.use('/parkingspots', parkingspotsRouter);
+app.use('/vehicles', vehiclesRouter);
 
+
+app.listen('80', function () {
+  console.log('Server started');
+  
+}); 
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -64,5 +72,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
 
 module.exports = app;
