@@ -2,12 +2,9 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-#message{
-  text-align: center;
-  vertical-align: : text-top;
-}
 .sidenav {
   height: 100%; /* Full-height: remove this if you want "auto" height */
   width: 160px; /* Set the width of the sidebar */
@@ -19,18 +16,19 @@
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 25px;
 }
-
-
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-	font-family: Arial, Helvetica, sans-serif;
-	font-weight: normal;
-	color:#fff;
-  display: block;
-  transition: 0.2s;
+.sidenav-logo-container{
+  position:fixed;
+  margin:auto;
 }
 
+.sidenav a {
+  padding: 32px;
+  text-decoration: none;
+  font-size: 35px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
   color: black;
@@ -40,24 +38,31 @@
   position: absolute;
   top: 0;
   right: 25px;
-  font-size: 30px;
+  font-size: 36px;
   margin-left: 50px;
 }
 
 /* The button used to open the sidebar */
 .openbtn {
-  font-size: 20px;
+  font-size: 2.6vw;
   cursor: pointer;
-  background-color: #111;
+  background-color: #860111;
   color: white;
-  padding: 10px 15px;
-  border: none;
+  padding: 15px 25px;
+  border-color: black;
+  max-width: 100%;
+  width: 6.4vw;
+  height: auto;
 }
 .openbtn:hover {
   background-color: #444;
 }
-/*Map Image*/
-.responsive {
+#main{
+  transition: margin-left .5s;
+  padding: .5vw;
+  background-color: #cc0000;
+}
+#homeMap .responsive {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -67,6 +72,10 @@
   overflow: auto;
   scrollbar-width: none;
   touch-action: manipulation;
+}
+#message{
+  text-align: center;
+  
 }
 /*Image Container for Map*/
 .container{
@@ -90,7 +99,6 @@
 .container .btn:hover{
     background: rgba(255, 255, 0,0.5);
 }
-
 .container #btnA{
   top:8%;
   left:54.5%;
@@ -104,6 +112,8 @@
   left:59.8%;
 }
 .container #btnD{
+  top:44.3%;
+  left:56.3%;
   top:28.8%;
   left:60.1%;
 }
