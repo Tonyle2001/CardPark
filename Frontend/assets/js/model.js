@@ -1,7 +1,10 @@
 class UserModel {
 
-  constructor() {
-  
+  constructor(uid) {
+    
+    this.uid = uid;
+    
+    // this.password = password;
     // Simulated user data
     this.user = {
     
@@ -14,5 +17,9 @@ class UserModel {
   validateUser(email, password) {
   
     return email === this.user.email && password === this.user.password;
+  }
+
+  getUID(){
+    return this.uid;
   }
 }
