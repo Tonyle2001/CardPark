@@ -11,19 +11,11 @@ class App {
   
     const { email, password } = this.view.getCredentials();
     
-    // if (email !== this.userModel.user.email) {
     
-    //   this.view.displayMessage('Incorrect email.', false);
-      
-    // } else if (password !== this.userModel.user.password) {
-    
-    //   this.view.displayMessage('Incorrect password.', false);
-      
-    // } 
     console.log(this.userModel.getUID());
 
-    if((this.userModel.getUID()) === 0){
-      this.view.displayMessage('Incorrect email.', false);
+    if((this.userModel.getUID()) === null){
+      this.view.displayMessage('Incorrect email or Password.', false);
     }
     else {
     

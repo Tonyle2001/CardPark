@@ -155,14 +155,14 @@ function Login(req, res) {
         if(err) {
           res.status(500).send({ message: err.message });
         } else {
-            if(!user){
-                res.status(404).send({ message: 'User does not exist'});
+            if(user.length == 0){
+                res.send({ user: null });
             } else {
                 bcrypt.compare(password, user[0].passwrd, (err, check) =>{
                     if(check){
                         res.status(200).send({ user:user[0].uid });
                     } else {
-                        res.send('Incorrect password');
+                        res.send({ user: null });
                     }
                 });
             }
