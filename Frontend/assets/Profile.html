@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
 <head>
     <title>Profile Page</title>
@@ -7,56 +8,76 @@
 <body>
 
 <div id="mySidenav" class="sidenav">
-  
+
     <a href="javascript:void(0)" class="closebtn">&times;</a>
-  
+    
     <a href="profile.html">Profile</a>
-  
+    
     <a href="Home.html">Home</a>
-  
+    
     <a href="#">Cancel</a>
-  
-    <a href="Settings.html">Settings</a>
-  
-    <a href="Report.html">Report</a>
+    
+    <a href="report.html">Report</a>
+    
+    <a href="#">Log Out</a>
+    
 </div>
 
 <div id="main">
+
     <button class="openbtn">☰</button>  
 
     <div class="container">
-      
+    
         <header>
+        
             <h1>User Profile</h1>
-          
+            
         </header>
         <div class="content">
-            <p class="info"><strong>First Name:</strong> John</p>
-          
-            <p class="info"><strong>Last Name:</strong> Doe</p>
-          
-            <p class="info"><strong>Email:</strong> johndoe@example.com</p>
-          
-            <p class="info"><strong>User ID:</strong> 12345</p>
+        
+            <p class="info"><strong>First Name:</strong> <span id="fname">Loading...</span></p>
+            
+            <p class="info"><strong>Last Name:</strong> <span id="lname">Loading...</span></p>
+            
+            <p class="info"><strong>Email:</strong> <span id="email">Loading...</span></p>
+            
+            <p class="info"><strong>User ID:</strong> <span id="uid">Loading...</span></p>
+
             
             <h2>Vehicle Information</h2>
             <form id="vehicleForm">
-              
+            
                 <input type="text" id="carMake" name="carMake" placeholder="Car Make">
-              
+                
                 <input type="text" id="carModel" name="carModel" placeholder="Car Model">
-              
+                
                 <input type="text" id="carColor" name="carColor" placeholder="Car Color">
-              
+                
                 <input type="text" id="carYear" name="carYear" placeholder="Car Year">
-              
+                
                 <input type="text" id="carLicensePlate" name="carLicensePlate" placeholder="Car License Plate">
-              
+                
                 <button type="button">Submit</button>
-              
+                
             </form>
-          
             <p id="vehicleInfo"></p>
+            
+            <h2>Change Password</h2>
+            
+            <form id="changePasswordForm">
+            
+            	<input type="password" id="oldPassword" name="oldPassword" placeholder="Old Password" required>
+            	
+            	<input type="password" id="newPassword" name="newPassword" placeholder="New Password" required>
+            	
+            	<input type="password" id="confirmNewPassword" name="confirmNewPassword" placeholder="Confirm New Password" required>
+            	
+        	<button type="button" onclick="changePassword()">Change Password</button>
+        	
+        	</form>
+        	
+    		<p id="passwordChangeResult"></p>
         </div>
     </div>
 </div>
@@ -65,6 +86,7 @@
 <script type= "text/javascript" src="assets/js/profileView.js"></script>
 <script type= "text/javascript" src="assets/js/profileListeners.js"></script>
 <script type= "text/javascript" src="assets/js/profileApp.js"></script>
+
 </body>
 </html>
 
