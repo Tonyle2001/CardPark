@@ -31,7 +31,9 @@ myform.addEventListener("submit", (e) => {
       if (!response.ok) {
         throw new Error('network returns error');
       }
+      window.location.href = 'Index.html';
       return response.json();
+
     })
     .then(data => console.log(data))
     .catch((error) => {
