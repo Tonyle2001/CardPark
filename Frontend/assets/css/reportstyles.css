@@ -1,1 +1,122 @@
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    height: 100%;
+}
+.container {
+    background-color: white; 
+    padding: 50px; 
+    margin: auto;
+    border-radius: 40px; 
+    box-shadow: 2px 2px 12px #aaa; 
+    max-width: 1000px; 
+    overflow : hidden;
+}
+header {
+    background: #333;
+    color: #fff;
+    padding-top: 20px;
+    min-height: 70px;
+    border-radius: 8px 8px 8px 8px;
+}
+
+header h1 {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+
+h2 {
+    padding-top: 85px;
+    margin-bottom: 20px; 
+}
+
+select {
+    width: calc(100% - 40px); 
+    padding: 10px; 
+    margin-bottom: 20px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: #860111;
+}
+
+
+
+/* Sidebar styles */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #860111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 25px;
+}
+
+.sidenav a {
+    padding: 32px;
+    text-decoration: none;
+    font-size: 35px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: black;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+    background-color: #cc0000;
+    min-height: 100vh; /* Make main take the full viewport height */
+}
+
+.openbtn {
+    font-size: 40px;
+    cursor: pointer;
+    background-color: #860111;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
