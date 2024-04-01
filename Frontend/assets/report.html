@@ -1,1 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Report Page</title>
+    
+    <link rel="stylesheet" href="assets/css/reportstyles.css">
+    
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+
+    <a href="javascript:void(0)" class="closebtn">&times;</a>
+    
+    <a href="profile.html">Profile</a>
+    
+    <a href="Home.html">Home</a>
+    
+    <a href="#">Cancel</a>
+    
+    <a href="report.html">Report</a>
+    
+    <a href="index.html">Log Out</a>
+</div>
+
+<div id="main">
+
+    <button class="openbtn">☰ </button>
+    
+    <div class="container">
+    
+        <header>
+        
+            <h1>Report An Issue</h1>
+            
+        </header>
+        <h2>What seems to be the problem, fellow cardinal?</h2>
+        
+        <select id="issue-selector">
+        
+            <option value="choose">Please Choose an Issue</option>
+            
+            <option value="parked-car">Someone Parked in Your Spot</option>
+            
+            <option value="hazard-item">Hazard Item in Your Spot</option>
+            
+            <option value="weather-issue">Weather Prohibiting Your Spot</option>
+            
+        </select>
+        
+        <button id="submit-button">Submit</button>
+    </div>
+</div>
+
+<script type= "text/javascript" src="assets/js/reportModel.js"></script>
+<script type= "text/javascript" src="assets/js/reportView.js"></script>
+<script type= "text/javascript" src="assets/js/reportListeners.js"></script>
+<script type= "text/javascript" src="assets/js/reportApp.js"></script>
+
+</body>
+</html>
 
