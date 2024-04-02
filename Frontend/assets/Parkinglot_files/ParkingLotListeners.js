@@ -31,9 +31,13 @@
 				end.innerHTML = et;
 			}
 			else{//If user is scheduling the start time in the afternoon.
-				t = (parseInt(value.charAt(1))) + 2;
-				et = value.replace(value.charAt(1), t)
 				
+				et = value.substring(1);
 				end.innerHTML = et;
+				
+				if(value == "20:00")
+					end.innerHTML = "10:00";
+				if(value == "20:30")
+					end.innerHTML = "10:30";
 			}
 	   }	
