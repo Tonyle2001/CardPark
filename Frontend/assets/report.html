@@ -3,7 +3,17 @@
 <head>
     <title>Report Page</title>
     
-    <link rel="stylesheet" href="assets/css/reportstyles.css">
+    <link rel="stylesheet" href="../assets/css/reportstyles.css">
+    <script type= "text/javascript" src="../assets/js/email.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("vgguGmxtCA2QDDL7Y");
+      })();
+    </script>
     
 </head>
 <body>
@@ -48,14 +58,14 @@
             
         </select>
         
-        <button id="submit-button">Submit</button>
+        <button id="submit-button" onclick="sendMail()">Submit</button>
     </div>
 </div>
 
-<script type= "text/javascript" src="assets/js/reportModel.js"></script>
-<script type= "text/javascript" src="assets/js/reportView.js"></script>
-<script type= "text/javascript" src="assets/js/reportListeners.js"></script>
-<script type= "text/javascript" src="assets/js/reportApp.js"></script>
+<script type= "text/javascript" src="../assets/js/reportModel.js"></script>
+<script type= "text/javascript" src="../assets/js/reportView.js"></script>
+<script type= "text/javascript" src="../assets/js/reportListeners.js"></script>
+<script type= "text/javascript" src="../assets/js/reportApp.js"></script>
 
 </body>
 </html>
