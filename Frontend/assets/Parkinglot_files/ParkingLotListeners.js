@@ -30,4 +30,10 @@
 				
 				end.innerHTML = et;
 			}
-		}	
+			else{//If user is scheduling the start time in the afternoon.
+				t = (parseInt(value.charAt(1))) + 2;
+				et = value.replace(value.charAt(1), t)
+				
+				end.innerHTML = et;
+			}
+	   }	
