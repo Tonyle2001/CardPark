@@ -1,4 +1,5 @@
-<html><head>
+<!DOCTYPE html>
+<html lang="en"><head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="Parkinglot_files/parkinglot.css">
@@ -27,13 +28,13 @@
 
 
 
-</div><!-- Top Message showing Reservation times, 5 AM to 9 PM, 30 Min Intervals--><div id="reservationTimes">
-    <h2> <label for="startTime">From:</label><select id="startTime" name="startTime">
+</div><!-- Top Message showing Reservation times, 5 AM to 9 PM, 30 Min Intervals--><span id="reservationTimes">
+    <h2> <label for="startTime">From:</label><select id="start_time" name="startTime" onchange="onChange(this.value)">
   <optgroup label="AM">
-    <option value="5:00" selected="selected">5:00</option>
+    <option value="5:00">5:00</option>
     <option value="5:30">5:30</option>
     <option value="6:00">6:00</option>
-    <option value="6:30">6:30</option>
+    <option value="6:30" selected="selected">6:30</option>
     <option value="7:00">7:00</option>
     <option value="7:30">7:30</option>
     <option value="8:00">8:00</option>
@@ -48,44 +49,46 @@
     </optgroup><optgroup label="PM">
   <option value="12:00">12:00</option>
   <option value="12:30">12:30</option>
-  <option value="1:00">1:00</option>
-  <option value="1:30">1:30</option>
-  <option value="2:00">2:00</option>
-  <option value="2:30">2:30</option>
-  <option value="3:00">3:00</option>
-  <option value="3:30">3:30</option>
-  <option value="4:00">4:00</option>
-  <option value="4:30">4:30</option>
-  <option value="5:00">5:00</option>
-  <option value="5:30">5:30</option>
-  <option value="6:00">6:00</option>
-  <option value="6:30">6:30</option>
-  <option value="7:00">7:00</option>
-  <option value="7:30">7:30</option>
-  <option value="8:00">8:00</option>
-  <option value="8:30">8:30</option>
+  <option value="13:00">1:00</option>
+  <option value="13:30">1:30</option>
+  <option value="14:00">2:00</option>
+  <option value="14:30">2:30</option>
+  <option value="15:00">3:00</option>
+  <option value="15:30">3:30</option>
+  <option value="16:00">4:00</option>
+  <option value="16:30">4:30</option>
+  <option value="17:00">5:00</option>
+  <option value="17:30">5:30</option>
+  <option value="18:00">6:00</option>
+  <option value="18:30">6:30</option>
+  <option value="19:00">7:00</option>
+  <option value="19:30">7:30</option>
+  <option value="20:00">8:00</option>
+  <option value="20:30">8:30</option>
   
    </optgroup>
     
-  </select><label for="endTime"> To:</label>
-
-
-<div id="endTime"></div> <!-- End Time is 2 hours after reservation, or until EOD if starting at 7:00 PM or later -->
-
-  
-  
-  
-  
-  
-  
-  
+  </select><span>
+<label for="endTime"> To:</label>
   
 
+
+<span id="end_time">8:30</span> <span id="lotLetter">
+
   
-</h2>
-  </div><!-- Lot Name/Letter --><h1>Lot: <div id="lotLetter"></div></h1><!-- Container for parking lot image --><div class="container" id="lotContainer">
+  
+  
+  
+  
+  
+  
+  
+
+  
+
+Lot: <!-- End Time is 2 hours after reservation, or until EOD if starting at 7:00 PM or later --></span></span></h2></span><!-- Lot Name/Letter --><!-- Container for parking lot image --><div class="container" id="lotContainer">
     <!-- Insert chosen lot with parking spot availability -->
   </div>
 
 
-</body></html>
+<script src="Parkinglot_files/ParkingLotListeners.js"></script></body></html>
