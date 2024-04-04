@@ -2,6 +2,9 @@
 class Model {
     constructor() {
         this.issue = null;
+        this.lot = null;
+        this.spot = null;
+        this.text = null;
     }
 
     setIssue(issue) {
@@ -11,10 +14,30 @@ class Model {
     getIssue() {
         return this.issue;
     }
+    setLot(lot) {
+        this.lot = lot;
+    }
+
+    getLot() {
+        return this.lot;
+    }
+    setSpot(spot) {
+        this.spot = spot;
+    }
+
+    getSpot() {
+        return this.spot;
+    }
+    
+    setText(text) {
+        this.text = text;
+    }
+
+    getText() {
+        return this.text;
+    }
+    
 }
-
-
-
 // sideNavModel part below
 
 var sideNavModel = (function() {

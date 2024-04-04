@@ -25,7 +25,13 @@ class Controller {
     
         this.model.setIssue(issue);
         
-        this.view.navigateToIssuePage(issue);
+        this.view.issueSelection(issue);
+    }
+    handleLotSelection(lot){
+    	
+    	this.model.setLot(lot);
+    	
+    	this.view.lotSelection(lot);
     }
 }
 // sideNavApp part below

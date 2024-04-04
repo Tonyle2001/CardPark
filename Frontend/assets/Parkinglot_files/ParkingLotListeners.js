@@ -6,11 +6,15 @@
   	var choice = sel.value;
 	var et;
 
+	  //Placeholder select option
+		if(choice == "choice")
+			end.innerHTML = " ";
 	   
 	   function onChange(value){
 			var t = parseInt(value.charAt(0));
-		   
+			
 			if(document.querySelector('select[id="start_time"] option:checked').parentElement.label == 'AM'){ //If user is scheduling for the morning
+
 				//If reservation time is between 10:00 and 11:30 AM (two-digit hr times)
 				if (value == "10:00")
 					et = "12:00 PM";
