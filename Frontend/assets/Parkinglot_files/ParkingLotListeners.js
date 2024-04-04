@@ -40,6 +40,6 @@
 				if(value == "20:30")
 					et = "10:30";
 				
-				end.innerHTML = et + " PM"
+				end.innerHTML = et + " PM";
 			}
 	   }	
