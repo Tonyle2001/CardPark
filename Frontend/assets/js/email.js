@@ -1,10 +1,17 @@
 function sendMail() {
-    let selectElement = document.querySelector("#issue-selector")
+    let issue = document.querySelector("#issue-selector")
+    let letter = document.querySelector("#parkingLot-selector")
+    let spotnum = document.querySelector("#spotNumber")
+    let description = document.querySelector("#description")
+
     var params = {
       to_name: "Campus Security",
       from_name: "CardPark Team",
       to_email: "Tonyle200185@gmail.com",
-      message: selectElement.value,
+      issue: issue.value,
+      letter: letter.value,
+      spot: spotnum.value,
+      description: description.value,
     };
   
     const serviceID = "service_29e6yqm";
