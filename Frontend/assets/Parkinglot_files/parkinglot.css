@@ -4,11 +4,9 @@
   overscroll-behavior: none;
 	box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
+	-ms-overflow-style: none;
 }
-html{
-  scrollbar-width:none;
-  -ms-overflow-style: none;
-}
+
 h1{
   font-size: 2vw;
   text-align: right;
