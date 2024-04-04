@@ -41,12 +41,13 @@ h2 {
     margin-bottom: 20px; 
 }
 
-select {
+select, input, textarea{
     width: calc(100% - 40px); 
     padding: 10px; 
     margin-bottom: 20px; 
     border: 1px solid #ccc; 
-    border-radius: 5px; 
+    border-radius: 10px; 
+    border-width: 3px;
 }
 
 button {
