@@ -2,6 +2,8 @@
 	var sel = document.getElementById('start_time');
 	var end = document.getElementById('end_time');
 	var t;
+	
+	var frameURL;
   
   	var choice = sel.value;
 	var et;
@@ -9,8 +11,21 @@
 	  //Placeholder select option
 		if(choice == "choice")
 			end.innerHTML = " ";
-	   
-	   function onChange(value){
+		  
+		function onLoad(){
+			var clicked = sessionStorage.getItem("clicked");
+			switch(clicked){
+			  							  
+			  case "btnC":
+				frameURL = "../assets/LotC.html";
+				break;
+			  
+			}
+			
+			document.getElementById('lot_frame').src=frameURL;
+		}			
+		  
+		function onChange(value){
 			var t = parseInt(value.charAt(0));
 			
 			if(document.querySelector('select[id="start_time"] option:checked').parentElement.label == 'AM'){ //If user is scheduling for the morning
@@ -46,4 +61,6 @@
 				
 				end.innerHTML = et + " PM";
 			}
-	   }	
+	   }
+
+	
