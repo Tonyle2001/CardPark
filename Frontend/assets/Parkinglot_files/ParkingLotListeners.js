@@ -4,6 +4,7 @@
 	var t;
 	
 	var frameURL;
+	var lotL;
   
   	var choice = sel.value;
 	var et;
@@ -15,14 +16,80 @@
 		function onLoad(){
 			var clicked = sessionStorage.getItem("clicked");
 			switch(clicked){
+				
+				case "btnA":
+					frameURL = "../assets/LotA.html"
+					letL= 'A';
+					break;
+				
+				case "btnB":
+					frameURL = "../assets/LotB.html"
+					lotL = 'B';
+					break;
 			  							  
-			  case "btnC":
-				frameURL = "../assets/LotC.html";
-				break;
-			  
+				case "btnC":
+					frameURL = "../assets/LotC.html";
+					lotL = 'C';
+					break;
+					
+				case "btnD":
+					frameURL = "../assets/LotD.html";
+					LotL = 'D';
+					break;
+					
+				case "btnE":
+					frameURL = "../assets/LotE.html";
+					lotL = 'E';
+					break;
+					
+				case "btnF":
+					frameURL = "../assets/LotF.html";
+					lotL = 'F';
+					break;
+					
+				case "btnG":
+					frameURL = "../assets/LotG.html";
+					lotL = 'G';
+					break;
+				
+				case "btnH":
+					frameURL = "../assets/LotH.html";
+					lotL = 'H';
+					break;
+					
+				case "btnI":
+					frameURL = "../assets/LotI.html";
+					lotL = 'I';
+					break;
+					
+				case "btnJ":
+					frameURL = "../assets/LotJ";
+					lotL = 'J';
+					break;
+					
+				case "btnL":
+					frameURL = "../assets/LotL";
+					lotL = 'L';
+					break;
+					
+				case "btnM":
+					frameURL = "../assets/lotM";
+					lotL = 'M';
+					break;
+					
+				case "btnO":
+					frameURL = "../assets/lotO";
+					lotL = 'O';
+					break;
+					
+				case "btnP":
+					frameURL = "../assets/LotP";
+					lotL = 'P';
+					break;
 			}
 			
 			document.getElementById('lot_frame').src=frameURL;
+			document.getElementById('letter').innerHTML=lotL;
 		}			
 		  
 		function onChange(value){
