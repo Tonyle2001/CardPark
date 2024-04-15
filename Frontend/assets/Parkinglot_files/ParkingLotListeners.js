@@ -129,5 +129,16 @@
 				end.innerHTML = et + " PM";
 			}
 	   }
+	   
+	   window.addEventListener('message', (event) => {
+		   if(event.data === 'openConfirmDialog'){
+			   
+				if(confirm('Is This Spot Okay?')) {
+					// Okay is clicked
+					
+				}
+				
+		   }
+	   });
 
 	
