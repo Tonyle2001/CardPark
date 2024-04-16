@@ -1,0 +1,155 @@
+body, html {
+    
+    height: 100%;
+    margin: 175px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#parking-lot {
+    position: relative;
+    width: 836px; /* Width of the image */
+    height: 541px; /* Height of the image */
+    margin: auto;
+    background: url('LotCFinalPic.GIF') no-repeat center center;
+    background-size: contain;
+}
+
+.parking-spot {
+    position: absolute;
+    width: auto; /* Width of the spot */
+    height: auto; /* Height of the spot */
+    background-color: #3fff00; /* Semi-transparent */
+    border-radius: 5px;
+    color: black;
+    border: none;
+    /* Position each spot with 'top' and 'left' in the separate CSS file, e.g., */
+}
+
+#c1 { 
+    top: 59%; 
+    left: 22.4%; 
+}
+#c2 { 
+    top: 59%; 
+    left: 26.2%; 
+}
+#c3 { 
+    top: 59%; 
+    left: 30%; 
+}
+#c4 { 
+    top: 59%; 
+    left: 33.99%; 
+}
+#c5 { 
+    top: 59%; 
+    left: 37.75%; 
+}
+#c6 { 
+    top: 59%; 
+    left: 41.6%; 
+}
+#c7 { 
+    top: 59%; 
+    left: 45.4%; 
+}
+#c8 { 
+    top: 59%; 
+    left: 49.3%; 
+}
+#c9 { 
+    top: 59%; 
+    left: 53.1%; 
+}
+#c10 { 
+    top: 59%; 
+    left: 56.5%; 
+}
+#c11 { 
+    top: 59%; 
+    left: 60.4%; 
+}
+#c12 { 
+    top: 59%; 
+    left: 64.2%; 
+}
+#c13 { 
+    top: 59%; 
+    left: 68%; 
+}
+#c14 { 
+    top: 59%; 
+    left: 71.8%; 
+}
+#c15 { 
+    top: 59%; 
+    left: 75.7%; 
+}
+#c16 { 
+    top: 59%; 
+    left: 79.5%; 
+}
+#hc17 { 
+    top: 34.7%; 
+    left: 25%; 
+}
+#hc18 { 
+    top: 34.7%; 
+    left: 28.94%; 
+}
+#c19 { 
+    top: 34.7%; 
+    left: 32.8%; 
+}
+#c20 { 
+    top: 34.7%; 
+    left: 36.6%; 
+}
+#c21 { 
+    top: 34.7%; 
+    left: 40.5%; 
+}
+#c22 { 
+    top: 34.7%; 
+    left: 44.3%; 
+}
+#c23 { 
+    top: 34.7%; 
+    left: 48.2%; 
+}
+#c24 { 
+    top: 34.7%; 
+    left: 52%; 
+}
+#c25 { 
+    top: 34.7%; 
+    left: 55.8%; 
+}
+#c26 { 
+    top: 34.7%; 
+    left: 59.6%; 
+}
+#c27 { 
+    top: 34.7%; 
+    left: 63.5%; 
+}
+#c28 { 
+    top: 34.7%; 
+    left: 67.4%; 
+}
+#evc29 { 
+    top: 34.7%; 
+    left: 71.1%; 
+}
+#evc30 { 
+    top: 34.7%; 
+    left: 75%; 
+}
+#hc31 { 
+    top: 34.7%; 
+    left: 78.9%; 
+}
+

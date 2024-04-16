@@ -2,6 +2,9 @@
 	var sel = document.getElementById('start_time');
 	var end = document.getElementById('end_time');
 	var t;
+	
+	var frameURL;
+	var lotL;
   
   	var choice = sel.value;
 	var et;
@@ -9,8 +12,87 @@
 	  //Placeholder select option
 		if(choice == "choice")
 			end.innerHTML = " ";
-	   
-	   function onChange(value){
+		  
+		function onLoad(){
+			var clicked = sessionStorage.getItem("clicked");
+			switch(clicked){
+				
+				case "btnA":
+					frameURL = "../assets/LotA.html"
+					letL= 'A';
+					break;
+				
+				case "btnB":
+					frameURL = "../assets/LotB.html"
+					lotL = 'B';
+					break;
+			  							  
+				case "btnC":
+					frameURL = "../assets/LotC.html";
+					lotL = 'C';
+					break;
+					
+				case "btnD":
+					frameURL = "../assets/LotD.html";
+					LotL = 'D';
+					break;
+					
+				case "btnE":
+					frameURL = "../assets/LotE.html";
+					lotL = 'E';
+					break;
+					
+				case "btnF":
+					frameURL = "../assets/LotF.html";
+					lotL = 'F';
+					break;
+					
+				case "btnG":
+					frameURL = "../assets/LotG.html";
+					lotL = 'G';
+					break;
+				
+				case "btnH":
+					frameURL = "../assets/LotH.html";
+					lotL = 'H';
+					break;
+					
+				case "btnI":
+					frameURL = "../assets/LotI.html";
+					lotL = 'I';
+					break;
+					
+				case "btnJ":
+					frameURL = "../assets/LotJ";
+					lotL = 'J';
+					break;
+					
+				case "btnL":
+					frameURL = "../assets/LotL";
+					lotL = 'L';
+					break;
+					
+				case "btnM":
+					frameURL = "../assets/lotM";
+					lotL = 'M';
+					break;
+					
+				case "btnO":
+					frameURL = "../assets/lotO";
+					lotL = 'O';
+					break;
+					
+				case "btnP":
+					frameURL = "../assets/LotP";
+					lotL = 'P';
+					break;
+			}
+			
+			document.getElementById('lot_frame').src=frameURL;
+			document.getElementById('letter').innerHTML=lotL;
+		}			
+		  
+		function onChange(value){
 			var t = parseInt(value.charAt(0));
 			
 			if(document.querySelector('select[id="start_time"] option:checked').parentElement.label == 'AM'){ //If user is scheduling for the morning
@@ -46,4 +128,17 @@
 				
 				end.innerHTML = et + " PM";
 			}
-	   }	
+	   }
+	   
+	   window.addEventListener('message', (event) => {
+		   if(event.data === 'openConfirmDialog'){
+			   
+				if(confirm('Is This Spot Okay?')) {
+					// Okay is clicked
+					
+				}
+				
+		   }
+	   });
+
+	

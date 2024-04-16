@@ -1,13 +1,121 @@
 *{
 	margin: 0;
 	padding: 0;
+  overscroll-behavior: none;
 	box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+	-ms-overflow-style: none;
 }
-h1{
-  text-align: right;
-  vertical-align: : text-top;
+
+h2{
+  font-size: 2vw;
+  text-align: center;
+  vertical-align: top;
+  padding-top: 40px;
+  font-size: 55px;
+  margin-right: 380px;
 }
 
 #reservationTimes{
   text-align: center;
+  font-size: 2vw;
+}
+#start_time{
+  font-size: 2vw;
+}
+#end_time{
+  /*! font-size: 2vw; */
+  color:black
+}
+
+#confirmButton{
+	text-align: center;
+}
+
+#parkingHeader{
+  text-align: center;
+  color:#ffffff;
+  font-size: 2.5vw;
+  transform:translateY(-150%);
+  
+}
+
+/* Sidebar styles */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #860111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 25px;
+}
+
+.sidenav a {
+    padding: 32px;
+    text-decoration: none;
+    font-size: 35px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: black;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+    background-color: #cc0000;
+    min-height: 100vh; /* Make main take the full viewport height */
+}
+
+.openbtn {
+    font-size: 40px;
+    cursor: pointer;
+    background-color: #860111;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+#lotLetter{
+  float: left;
+  font-size: 60px;
+  margin-left: 390px;
+  
+}
+
+#iframe-wrapper{
+  position: relative;
+  overflow: hidden;
+  width: 920px;
+  height: 550px;
+  margin: auto;
+  margin-top: 40px;
+  border-radius: 4px;
+}
+#lot_frame{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
 }
