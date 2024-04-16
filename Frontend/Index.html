@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Welcome to CardPark</title>
+  
+  <link rel="stylesheet" href="../assets/css/loginstyles.css">
+  
+</head>
+
+<body>
+
+  <div class="centered-container">
+  
+    <!-- Logo Image -->
+    <div class="logo-container">
+      <img src="logo.png" alt="CardPark Logo" />
+    </div>
+
+    <!-- Login Container -->
+    <div id="login-container">
+    
+      <h1>Welcome to CardPark</h1>
+      
+      <form method="GET" action="Home.html" id="login-form">
+      
+        <div class="input-wrapper">
+        
+          <label for="email">NCC Email:</label>
+          
+          <input type="email" id="email" name="email" required>
+          
+        </div>
+        
+        <div class="input-wrapper">
+        
+          <label for="password">Password:</label>
+          
+          <input type="password" id="password" name="password" required>
+          
+        </div>
+        
+        <div class="form-actions">
+        
+          <button type="submit">Login</button>
+          
+          <button onclick="window.location.href = 'newMember.html';">New Member</button>
+          
+        </div>
+      </form>
+    </div>
+  </div>
+  <script type="text/javascript" src="../assets/js/model.js"></script>
+  <script type="text/javascript" src="../assets/js/view.js"></script>
+  <script type="text/javascript" src="../assets/js/app.js"></script>
+  <script type="text/javascript" src="../assets/js/listeners.js"></script>
+</body>
+</html>

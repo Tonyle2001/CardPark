@@ -18,72 +18,72 @@
 			switch(clicked){
 				
 				case "btnA":
-					frameURL = "../assets/LotA.html"
+					frameURL = "LotA.html"
 					letL= 'A';
 					break;
 				
 				case "btnB":
-					frameURL = "../assets/LotB.html"
+					frameURL = "LotB.html"
 					lotL = 'B';
 					break;
 			  							  
 				case "btnC":
-					frameURL = "../LoginPage/parkingLotC.html";
+					frameURL = "LotC.html";
 					lotL = 'C';
 					break;
 					
 				case "btnD":
-					frameURL = "../assets/LotD.html";
+					frameURL = "LotD.html";
 					LotL = 'D';
 					break;
 					
 				case "btnE":
-					frameURL = "../assets/LotE.html";
+					frameURL = "LotE.html";
 					lotL = 'E';
 					break;
 					
 				case "btnF":
-					frameURL = "../LoginPage/parkingLotF.html";
+					frameURL = "LotF.html";
 					lotL = 'F';
 					break;
 					
 				case "btnG":
-					frameURL = "../LoginPage/parkingLotG.html";
+					frameURL = "LotG.html";
 					lotL = 'G';
 					break;
 				
 				case "btnH":
-					frameURL = "../assets/LotH.html";
+					frameURL = "LotH.html";
 					lotL = 'H';
 					break;
 					
 				case "btnI":
-					frameURL = "../LoginPage/parkingLotI.html";
+					frameURL = "LotI.html";
 					lotL = 'I';
 					break;
 					
 				case "btnJ":
-					frameURL = "../assets/LotJ";
+					frameURL = "LotJ.html";
 					lotL = 'J';
 					break;
 					
 				case "btnL":
-					frameURL = "../LoginPage/parkingLotL.html";
+					frameURL = "LotL.html";
 					lotL = 'L';
 					break;
 					
 				case "btnM":
-					frameURL = "../LoginPage/parkingLotM.html";
+					frameURL = "LotM.html";
 					lotL = 'M';
 					break;
 					
 				case "btnO":
-					frameURL = "../assets/LotO";
+					frameURL = "LotO";
 					lotL = 'O';
 					break;
 					
 				case "btnP":
-					frameURL = "../assets/LotP";
+					frameURL = "LotP";
 					lotL = 'P';
 					break;
 			}
@@ -131,14 +131,15 @@
 	   }
 
 		window.addEventListener('message', (event) => {
-		   if(event.data === 'openConfirmDialog'){
-			   
-				if(confirm('Is This Spot Okay?')) {
-					// Okay is clicked
+			var spot;
+			spot = event.data;
+		
+			if(confirm('Is Spot ' + spot + ' Okay?')) {
+				// If 'Okay' is clicked, send spot id and res time to backend.
 					
-				}
+			}
 				
-		   }
+		   
 	   });
 
 // sideNavListeners part below
