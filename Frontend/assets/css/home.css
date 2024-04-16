@@ -1,36 +1,31 @@
 *{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .sidenav {
-  height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 160px; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
   left: 0;
-  background-color: #cc0000; /*red*/ 
-  overflow-x: hidden; /* Disable horizontal scroll */
+  background-color: #860111;
+  overflow-x: hidden;
+  transition: 0.5s;
   padding-top: 25px;
-}
-.sidenav-logo-container{
-  position:fixed;
-  margin:auto;
 }
 
 .sidenav a {
-  padding: 8px 8px 8px 32px;
+  padding: 32px;
   text-decoration: none;
-	font-family: Arial, Helvetica, sans-serif;
-	font-weight: normal;
-	color:#fff;
+  font-size: 35px;
+  color: white;
   display: block;
-  transition: 0.2s;
+  transition: 0.3s;
 }
 
-/* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
   color: black;
 }
@@ -39,21 +34,35 @@
   position: absolute;
   top: 0;
   right: 25px;
-  font-size: 30px;
+  font-size: 36px;
   margin-left: 50px;
 }
 
-/* The button used to open the sidebar */
-.openbtn {
-  font-size: 20px;
-  cursor: pointer;
-  background-color: #111;
-  color: white;
-  padding: 10px 15px;
-  border: none;
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+    background-color: #cc0000;
+    min-height: 100vh; /* Make main take the full viewport height */
 }
+
+.openbtn {
+  font-size: 40px;
+  cursor: pointer;
+  background-color: #860111;
+  color: white;
+  padding: 15px 25px;
+  border-color: black;
+}
+
 .openbtn:hover {
   background-color: #444;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
 }
 #homeMap .responsive {
   display: block;
@@ -69,4 +78,84 @@
 #message{
   text-align: center;
   
+}
+/*Image Container for Map*/
+.container{
+  position: relative;
+}
+
+.container .btn{
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #5550;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition-duration: 0.3s;
+  text-indent: -9999px;
+}
+.container .btn:hover{
+    background: rgba(255, 255, 0,0.5);
+}
+.container #btnA{
+  top:8%;
+  left:54.5%;
+}
+.container #btnB{
+  top:12.5%;
+  left:65%;
+}
+.container #btnC{
+  top:20%;
+  left:59.8%;
+}
+.container #btnD{
+  top:44.3%;
+  left:56.3%;
+  top:28.8%;
+  left:60.1%;
+}
+.container #btnE{
+  top:40.3%;
+  left:41.0%;
+}
+.container #btnF{
+  top:40.7%;
+  left:57.6%;
+}
+.container #btnG{
+  top:47.2%;
+  left:53.98%;
+}
+.container #btnH{
+  top:58.9%;
+  left:39.99%;
+}
+.container #btnI{
+  top:65.9%;
+  left:49.4%;
+}
+.container #btnJ{
+  top:70%;
+  left:57.79%;
+}
+.container #btnL{
+  top:75.4%;
+  left:43.4%;
+}
+.container #btnM{
+  top:73%;
+  left:38.27%;
+}
+.container #btnO{
+  top:84.9%;
+  left:48.95%
+}
+.container #btnP{
+  top:76%;
+  left:49.47%;
 }
