@@ -1,21 +1,22 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en">
+<head>
 <title>Reserve A Spot</title>
+
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="Parkinglot_files/parkinglot.css">
-<script src="Parkinglot_files/SideNavModel.js"></script>
-<script src="Parkinglot_files/SideNavView.js"></script>
-<script src="Parkinglot_files/SideNavApp.js"></script>
-<script src="Parkinglot_files/SideNavListeners.js"></script>
+
+<link rel="stylesheet" href="assets/css/parkingLotstyles.css">
+
 </head>
 
 <body onload="onLoad()">  
   
-<div id="mySidenav" class="sidenav" style="width: 0px;">
+<div id="mySidenav" class="sidenav">
   
-    <a href="javascript:void(0)" class="closebtn">×</a>
-
+    <a href="javascript:void(0)" class="closebtn">&times;</a>
+  
     <a href="profile.html">Profile</a>
   
     <a href="Home.html">Home</a>
@@ -27,9 +28,8 @@
     <a href="Report.html">Report</a>
 </div>
 
-<div id="main" style="margin-left: 0px;">
-    <button class="openbtn">☰</button>  
-</div>
+<div id="main">
+    <button class="openbtn">☰</button> 
 
 <!-- Top Message showing Reservation times, 5 AM to 9 PM, 30 Min Intervals-->
 <span id="reservationTimes">
@@ -79,19 +79,22 @@
     
   </select><span>
 <label for="endTime"> To:</label>
-  
-
 
 <span id="end_time"> </span> <span id="lotLetter">
   Lot:
     <span id="letter"> </span>
 
-</span></span></h2></span><!-- Lot Name/Letter --><!-- Container for parking lot image --><!-- Insert chosen lot with parking spot availability --> 
+</span></span></h2></span><!-- Lot Name/Letter --><!-- Container for parking lot image --><!-- Insert chosen lot with parking spot availability -->
 <div id="iframe-wrapper">
-<iframe id="lot_frame" src="Parkinglot_files/LotC.htm" title="Lot"></iframe>
+<iframe id="lot_frame" src="url" title="Lot"></iframe>
 </div> 
     
-  
+</div>  
+<script type= "text/javascript" src="assets/js/parkingLotModel.js"></script>
+<script type= "text/javascript" src="assets/js/parkingLotView.js"></script>
+<script type= "text/javascript" src="assets/js/parkingLotListeners.js"></script>
+<script type= "text/javascript" src="assets/js/parkingLotApp.js"></script>
 
 
-<script src="Parkinglot_files/ParkingLotListeners.js"></script></body></html>
+</body>
+</html>
