@@ -1,0 +1,452 @@
+body, html {
+    
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#parking-lot {
+    position: relative;
+    width: 836px; /* Width of the image */
+    height: 541px; /* Height of the image */
+    margin: auto;
+    background: url('LotPFinalPic2.GIF') no-repeat center center;
+    background-size: contain;
+}
+
+.parking-spot {
+    font-size: 10px;
+    position: absolute;
+    cursor: pointer;
+    pointer-events: auto;
+    width: auto; /* Width of the spot */
+    height: auto; /* Height of the spot */
+    background-color: #3fff00; 
+    border-radius: 5px;
+    color: black;
+    border: none;
+    
+    
+}
+
+.parking-spot.occupied {
+  background-color: #ff4e4e; /* Red for occupied */
+}
+
+.parking-spot.available {
+  background-color: #3fff00; /* Green for available */
+}
+
+#p1 { 
+    top: 76.9%; 
+    left: 23.4%; 
+}
+#p2 { 
+    top: 76.9%; 
+    left: 26.4%; 
+}
+#p3 { 
+    top: 76.9%; 
+    left: 29.3%; 
+}
+#p4 { 
+    top: 76.9%; 
+    left: 32.3%; 
+}
+#p5 { 
+    top: 76.9%; 
+    left: 35.2%; 
+}
+#p6 { 
+    top: 76.9%; 
+    left: 38.17%; 
+}
+#p7 { 
+    top: 76.9%; 
+    left: 41.1%; 
+}
+#p8 { 
+    top: 76.9%; 
+    left: 44.1%; 
+}
+#p9 { 
+    top: 76.9%; 
+    left: 47.1%; 
+}
+#p10 { 
+    top: 76.9%; 
+    left: 49.6%; 
+}
+#p11 { 
+    top: 76.9%; 
+    left: 52.56%; 
+}
+#p12 { 
+    top: 76.9%; 
+    left: 55.54%; 
+}
+#p13 { 
+    top: 76.9%; 
+    left: 58.45%; 
+}
+#p14 { 
+    top: 76.9%; 
+    left: 61.4%; 
+}
+#p15 { 
+    top: 76.9%; 
+    left: 64.37%; 
+}
+#p16 { 
+    top: 76.9%; 
+    left: 67.27%; 
+}
+#p17 { 
+    top: 76.9%; 
+    left: 70.25%; 
+}
+#p18 { 
+    top: 76.9%; 
+    left: 73.22%; 
+}
+#p19 { 
+    top: 76.9%; 
+    left: 76.2%; 
+}
+#p20 { 
+    top: 76.9%; 
+    left: 79.1%; 
+}
+#p21 { 
+    top: 76.9%; 
+    left: 82.04%; 
+}
+#p22 { 
+    top: 76.9%; 
+    left: 85.02%; 
+}
+#p23 { 
+    top: 54.9%; 
+    left: 23%; 
+}
+#p24 { 
+    top: 54.9%; 
+    left: 25.9%; 
+}
+#p25 { 
+    top: 54.9%; 
+    left: 28.89%; 
+}
+#p26 { 
+    top: 54.9%; 
+    left: 31.8%; 
+}
+#p27 { 
+    top: 54.9%; 
+    left: 34.77%; 
+}
+#p28 { 
+    top: 54.9%; 
+    left: 37.7%; 
+}
+#p29 { 
+    top: 54.9%; 
+    left: 40.65%; 
+}
+#p30 { 
+    top: 54.9%; 
+    left: 43.6%; 
+}
+#p31 { 
+    top: 54.9%; 
+    left: 46.55%; 
+}
+#p32 { 
+    top: 54.9%; 
+    left: 49.5%; 
+}
+#p33 { 
+    top: 54.9%; 
+    left: 52.45%; 
+}
+#p34 { 
+    top: 54.9%; 
+    left: 55.4%; 
+}
+#p35 { 
+    top: 54.9%; 
+    left: 58.35%; 
+}
+#p36 { 
+    top: 54.9%; 
+    left: 61.3%; 
+}
+#p37 { 
+    top: 54.9%; 
+    left: 64.25%; 
+}
+#p38 { 
+    top: 54.9%; 
+    left: 67.2%; 
+}
+#p39 { 
+    top: 54.9%; 
+    left: 70.15%; 
+}
+#p40 { 
+    top: 54.9%; 
+    left: 73.1%; 
+}
+#p41 { 
+    top: 54.9%; 
+    left: 76.05%; 
+}
+#p42 { 
+    top: 54.9%; 
+    left: 79%; 
+}
+#p43 { 
+    top: 23.2%; 
+    left: 79%; 
+}
+#p44 { 
+    top: 23.2%; 
+    left: 76.1%; 
+}
+#p45 { 
+    top: 23.2%; 
+    left: 73.15%; 
+}
+#p46 { 
+    top: 23.2%; 
+    left: 70.2%; 
+}
+#p47 { 
+    top: 23.2%; 
+    left: 67.25%; 
+}
+#p48 { 
+    top: 23.2%; 
+    left: 64.3%; 
+}
+#p49 { 
+    top: 23.2%; 
+    left: 61.35%; 
+}
+#p50 { 
+    top: 23.2%; 
+    left: 58.4%; 
+}
+#p51 { 
+    top: 23.2%; 
+    left: 55.45%; 
+}
+#p52 { 
+    top: 23.2%; 
+    left: 52.5%; 
+}
+#p53 { 
+    top: 23.2%; 
+    left: 49.55%; 
+}
+#p54 { 
+    top: 23.2%; 
+    left: 46.6%; 
+}
+#p55 { 
+    top: 23.2%; 
+    left: 43.65%; 
+}
+#p56 { 
+    top: 23.2%; 
+    left: 40.7%; 
+}
+#p57 { 
+    top: 23.2%; 
+    left: 37.75%; 
+}
+#p58 { 
+    top: 23.2%; 
+    left: 34.8%; 
+}
+#p59 { 
+    top: 23.2%; 
+    left: 31.85%; 
+}
+#p60 { 
+    top: 23.2%; 
+    left: 28.9%; 
+}
+#p61 { 
+    top: 23.2%; 
+    left: 25.95%; 
+}
+#p62 { 
+    top: 23.2%; 
+    left: 23%; 
+}
+#p63 { 
+    top: 6.3%; 
+    left: 84.95%; 
+}
+#p64 { 
+    top: 6.3%; 
+    left: 81.95%; 
+}
+#p65 { 
+    top: 6.3%; 
+    left: 79%; 
+}
+#p66 { 
+    top: 6.3%; 
+    left: 76.1%; 
+}
+#p67 { 
+    top: 6.3%; 
+    left: 73.15%; 
+}
+#p68 { 
+    top: 6.3%; 
+    left: 70.2%; 
+}
+#p69 { 
+    top: 6.3%; 
+    left: 67.25%; 
+}
+#p70 { 
+    top: 6.3%; 
+    left: 64.3%; 
+}
+#p71 { 
+    top: 6.3%; 
+    left: 61.35%; 
+}
+#p72 { 
+    top: 6.3%; 
+    left: 58.4%; 
+}
+#p73 { 
+    top: 6.3%; 
+    left: 55.45%; 
+}
+#p74 { 
+    top: 6.3%; 
+    left: 52.5%; 
+}
+#p75 { 
+    top: 6.3%; 
+    left: 49.55%; 
+}
+#p76 { 
+    top: 6.3%; 
+    left: 46.6%; 
+}
+#p77 { 
+    top: 6.3%; 
+    left: 43.65%; 
+}
+#p78 { 
+    top: 6.3%; 
+    left: 40.7%; 
+}
+#p79 { 
+    top: 6.3%; 
+    left: 37.75%; 
+}
+#p80 { 
+    top: 6.3%; 
+    left: 34.8%; 
+}
+#p81 { 
+    top: 6.3%; 
+    left: 31.85%; 
+}
+#p82 { 
+    top: 6.3%; 
+    left: 28.9%; 
+}
+#p83 { 
+    top: 6.3%; 
+    left: 25.95%; 
+}
+#p84 { 
+    top: 6.3%; 
+    left: 23%; 
+}
+#p85 { 
+    top: 6.3%; 
+    left: 20.05%; 
+}
+#p86 { 
+    top: 6.3%; 
+    left: 17.1%; 
+}
+#p87 { 
+    top: 6.3%; 
+    left: 14.15%; 
+}
+#p88 { 
+    top: 10.55%; 
+    left: 5.35%; 
+}
+#p89 { 
+    top: 15%; 
+    left: 5.35%; 
+}
+#p90 { 
+    top: 19.6%; 
+    left: 5.35%; 
+}
+#p91 { 
+    top: 24.19%; 
+    left: 5.35%; 
+}
+#p92 { 
+    top: 28.65%; 
+    left: 5.35%; 
+}
+#p93 { 
+    top: 33.3%; 
+    left: 5.35%; 
+}
+#p94 { 
+    top: 37.8%; 
+    left: 5.35%; 
+}
+#p95 { 
+    top: 42.4%; 
+    left: 5.35%; 
+}
+#p96 { 
+    top: 46.95%; 
+    left: 5.35%; 
+}
+#p97 { 
+    top: 51.5%; 
+    left: 5.35%; 
+}
+#p98 { 
+    top: 56.1%; 
+    left: 5.35%; 
+}
+#p99 { 
+    top: 60.6%; 
+    left: 5.35%; 
+}
+#p100 { 
+    top: 65.2%; 
+    left: 5.35%; 
+}
+#p101 { 
+    top: 69.8%; 
+    left: 5.35%; 
+}
+#p102 { 
+    top: 74.25%; 
+    left: 5.35%; 
+}
+#p103 { 
+    top: 78.85%; 
+    left: 5.35%; 
+}
