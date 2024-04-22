@@ -1,11 +1,9 @@
 body, html {
     
     height: 100%;
-    margin: 175px;
     display: flex;
     justify-content: center;
     align-items: center;
-    scrollbar-width: none;
     
 }
 
@@ -20,6 +18,8 @@ body, html {
 
 .parking-spot {
     position: absolute;
+    cursor: pointer;
+    pointer-events: auto;
     width: auto; /* Width of the spot */
     height: auto; /* Height of the spot */
     background-color: #3fff00; /* Semi-transparent */
@@ -27,6 +27,13 @@ body, html {
     color: black;
     border: none;
     /* Position each spot with 'top' and 'left' in the separate CSS file, e.g., */
+}
+.parking-spot.occupied {
+  background-color: #ff4e4e; /* Red for occupied */
+}
+
+.parking-spot.available {
+  background-color: #3fff00; /* Green for available */
 }
 
 #c1 { 
@@ -93,11 +100,11 @@ body, html {
     top: 59%; 
     left: 79.5%; 
 }
-#hc17 { 
+#c17 { 
     top: 34.7%; 
     left: 25%; 
 }
-#hc18 { 
+#c18 { 
     top: 34.7%; 
     left: 28.94%; 
 }
@@ -141,16 +148,17 @@ body, html {
     top: 34.7%; 
     left: 67.4%; 
 }
-#evc29 { 
+#c29 { 
     top: 34.7%; 
     left: 71.1%; 
 }
-#evc30 { 
+#c30 { 
     top: 34.7%; 
     left: 75%; 
 }
-#hc31 { 
+#c31 { 
     top: 34.7%; 
     left: 78.9%; 
 }
+
 
