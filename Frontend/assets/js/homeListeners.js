@@ -1,7 +1,7 @@
 
 function onClick(clicked_id){
 	sessionStorage.setItem("clicked", clicked_id);
-	location.href="../Frontend/ParkingLot.html";
+	location.href="../Frontend/Parkinglot.html";
 }
 
 var HomeListeners = (function() {

@@ -1,5 +1,5 @@
 
-   var sel = document.getElementById('start_time');
+	var sel = document.getElementById('start_time');
 	var end = document.getElementById('end_time');
 	var t;
 	
@@ -13,77 +13,77 @@
 		if(choice == "choice")
 			end.innerHTML = " ";
 		  
-		function onLoad(){
+		function onLoad(){ //When a lot is chosen, its page url is passed to the iframe in the parking lot page.
 			var clicked = sessionStorage.getItem("clicked");
 			switch(clicked){
 				
 				case "btnA":
-					frameURL = "LotA.html"
+					frameURL = "ParkingLotA.html"
 					letL= 'A';
 					break;
 				
 				case "btnB":
-					frameURL = "LotB.html"
+					frameURL = "ParkingLotB.html"
 					lotL = 'B';
 					break;
 			  							  
 				case "btnC":
-					frameURL = "LotC.html";
+					frameURL = "ParkingLotC.html";
 					lotL = 'C';
 					break;
 					
 				case "btnD":
-					frameURL = "LotD.html";
+					frameURL = "ParkingLotD.html";
 					LotL = 'D';
 					break;
 					
 				case "btnE":
-					frameURL = "LotE.html";
+					frameURL = "ParkingLotE.html";
 					lotL = 'E';
 					break;
 					
 				case "btnF":
-					frameURL = "LotF.html";
+					frameURL = "ParkingLotF.html";
 					lotL = 'F';
 					break;
 					
 				case "btnG":
-					frameURL = "LotG.html";
+					frameURL = "ParkingLotG.html";
 					lotL = 'G';
 					break;
 				
 				case "btnH":
-					frameURL = "LotH.html";
+					frameURL = "ParkingLotH.html";
 					lotL = 'H';
 					break;
 					
 				case "btnI":
-					frameURL = "LotI.html";
+					frameURL = "ParkingLotI.html";
 					lotL = 'I';
 					break;
 					
 				case "btnJ":
-					frameURL = "LotJ.html";
+					frameURL = "ParkingLotJ.html";
 					lotL = 'J';
 					break;
 					
 				case "btnL":
-					frameURL = "LotL.html";
+					frameURL = "ParkingLotL.html";
 					lotL = 'L';
 					break;
 					
 				case "btnM":
-					frameURL = "LotM.html";
+					frameURL = "ParkingLotM.html";
 					lotL = 'M';
 					break;
 					
 				case "btnO":
-					frameURL = "LotO";
+					frameURL = "ParkingLotO";
 					lotL = 'O';
 					break;
 					
 				case "btnP":
-					frameURL = "LotP";
+					frameURL = "ParkingLotP";
 					lotL = 'P';
 					break;
 			}
@@ -92,7 +92,7 @@
 			document.getElementById('letter').innerHTML=lotL;
 		}			
 		  
-		function onChange(value){
+		function onChange(value){ // Update displayed 'End Time' when the start-time dropdown is changed.
 			var t = parseInt(value.charAt(0));
 			
 			if(document.querySelector('select[id="start_time"] option:checked').parentElement.label == 'AM'){ //If user is scheduling for the morning
@@ -130,15 +130,25 @@
 			}
 	   }
 
-		window.addEventListener('message', (event) => {
+		window.addEventListener('message', (event) => {// Prompts user after they click a parking spot.
 			var spot;
+			
+			
+			var time;
+			
 			spot = event.data;
-		
-			if(confirm('Is Spot ' + spot + ' Okay?')) {
-				// If 'Okay' is clicked, send spot id and res time to backend.
-					
+			
+			if(sel.value == "choice"){ // Prompt user with error message if they pick a spot before choosing a reservation time.
+				window.alert("Please Select a Starting Time");
 			}
-				
+			 else if(confirm('Is Spot ' + spot + ' Okay?')) {
+				// If 'Okay' is clicked, send spot id and res time to backend. 
+				time = sel.value;
+			}
+			
+			 else{
+				 return;
+			 }
 		   
 	   });
 
