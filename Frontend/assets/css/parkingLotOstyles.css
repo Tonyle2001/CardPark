@@ -1,0 +1,249 @@
+body, html {
+    
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#parking-lot {
+    position: relative;
+    width: 836px; /* Width of the image */
+    height: 541px; /* Height of the image */
+    margin: auto;
+    background: url('LotOFinalPic.GIF') no-repeat center center;
+    background-size: contain;
+}
+
+.parking-spot {
+    font-size: 9.6px;
+    position: absolute;
+    cursor: pointer;
+    pointer-events: auto;
+    width: auto; /* Width of the spot */
+    height: auto; /* Height of the spot */
+    background-color: #3fff00; /* Semi-transparent */
+    border-radius: 5px;
+    color: black;
+    border: none;
+    /* Position each spot with 'top' and 'left' in the separate CSS file, e.g., */
+    
+}
+
+.parking-spot.occupied {
+  background-color: #ff4e4e; /* Red for occupied */
+}
+
+.parking-spot.available {
+  background-color: #3fff00; /* Green for available */
+}
+
+#o1 { 
+    top: 26.3%; 
+    left: 22.55%; 
+}
+#o2 { 
+    top: 26.3%; 
+    left: 25.2%; 
+}
+#o3 { 
+    top: 26.3%; 
+    left: 27.8%; 
+}
+#o4 { 
+    top: 26.3%; 
+    left: 30.4%; 
+}
+#o5 { 
+    top: 26.3%; 
+    left: 33%; 
+}
+#o6 { 
+    top: 46.3%; 
+    left: 20.3%; 
+}
+#o7 { 
+    top: 46.3%; 
+    left: 22.85%; 
+}
+#o8 { 
+    top: 46.3%; 
+    left: 25.5%; 
+}
+#o9 { 
+    top: 46.3%; 
+    left: 28.1%; 
+}
+#o10 { 
+    top: 46.3%; 
+    left: 30.4%; 
+}
+#o11 { 
+    top: 46.3%; 
+    left: 32.95%; 
+}
+#o12 { 
+    top: 46.3%; 
+    left: 35.6%; 
+}
+#o13 { 
+    top: 46.3%; 
+    left: 38.2%; 
+}
+#o14 { 
+    top: 46.3%; 
+    left: 40.8%; 
+}
+#o15 { 
+    top: 56.75%; 
+    left: 25.35%; 
+}
+#o16 { 
+    top: 56.75%; 
+    left: 27.97%; 
+}
+#o17 { 
+    top: 56.75%; 
+    left: 30.57%; 
+}
+#o18 { 
+    top: 56.75%; 
+    left: 33.2%; 
+}
+#o19 { 
+    top: 56.75%; 
+    left: 35.78%; 
+}
+
+#o20 { 
+    top: 31.45%; 
+    left: 40.5%; 
+}
+#o21 { 
+    top: 31.45%; 
+    left: 43.1%; 
+}
+#o22 { 
+    top: 31.45%; 
+    left: 45.7%; 
+}
+#o23 { 
+    top: 31.45%; 
+    left: 48.3%; 
+}
+#o24 { 
+    top: 31.45%; 
+    left: 50.9%; 
+}
+#o25 { 
+    top: 26.5%; 
+    left: 59.8%; 
+}
+#o26 { 
+    top: 26.5%; 
+    left: 62.45%; 
+}
+#o27 { 
+    top: 26.5%; 
+    left: 65.1%; 
+}
+#o28 { 
+    top: 26.5%; 
+    left: 67.65%; 
+}
+#o29 { 
+    top: 26.5%; 
+    left: 70.25%; 
+}
+#o30 { 
+    top: 26.5%; 
+    left: 72.85%; 
+}
+#o31 { 
+    top: 26.5%; 
+    left: 75.5%; 
+}
+#o32 { 
+    top: 26.5%; 
+    left: 78.1%; 
+}
+#o33 { 
+    top: 26.5%; 
+    left: 80.7%; 
+}
+#o34 { 
+    top: 26.5%; 
+    left: 83.25%; 
+}
+#o35 { 
+    top: 26.5%; 
+    left: 85.9%; 
+}
+#o36 { 
+    top: 26.5%; 
+    left: 88.5%; 
+}
+#o37 { 
+    top: 66.8%; 
+    left: 89.8%; 
+}
+#o37 { 
+    top: 66.8%; 
+    left: 89.8%; 
+}
+#o38 { 
+    top: 66.8%; 
+    left: 87.15%; 
+}
+#o39 { 
+    top: 66.8%; 
+    left: 84.55%; 
+}
+#o40 { 
+    top: 66.8%; 
+    left: 81.96%; 
+}
+#o41 { 
+    top: 66.8%; 
+    left: 79.35%; 
+}
+#o42 { 
+    top: 66.8%; 
+    left: 76.75%; 
+}
+#o43 { 
+    top: 66.8%; 
+    left: 74.15%; 
+}
+#o44 { 
+    top: 66.8%; 
+    left: 71.54%; 
+}
+#o45 { 
+    top: 66.8%; 
+    left: 68.9%; 
+}
+#o46 { 
+    top: 66.8%; 
+    left: 66.35%; 
+}
+#o47 { 
+    top: 66.8%; 
+    left: 63.7%; 
+}
+#o48 { 
+    top: 66.8%; 
+    left: 61.15%; 
+}
+#o49 { 
+    top: 66.8%; 
+    left: 58.5%; 
+}
+#o50 { 
+    top: 66.8%; 
+    left: 55.9%; 
+}
+#o51 { 
+    top: 66.8%; 
+    left: 53.28%; 
+}
