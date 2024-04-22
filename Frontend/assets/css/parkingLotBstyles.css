@@ -1,0 +1,65 @@
+body, html {
+    
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#parking-lot {
+    position: relative;
+    width: 836px; /* Width of the image */
+    height: 541px; /* Height of the image */
+    margin: auto;
+    background: url('LotBFinalPic.GIF') no-repeat center center;
+    background-size: contain;
+    
+    
+}
+
+.parking-spot {
+    font-size: 19px;
+    position: absolute;
+    cursor: pointer;
+    pointer-events: auto;
+    width: auto; /* Width of the spot */
+    height: auto; /* Height of the spot */
+    background-color: #3fff00; /* Semi-transparent */
+    border-radius: 5px;
+    color: black;
+    border: none;
+    /* Position each spot with 'top' and 'left' in the separate CSS file, e.g., */
+}
+.parking-spot.occupied {
+  background-color: #ff4e4e; /* Red for occupied */
+}
+
+.parking-spot.available {
+  background-color: #3fff00; /* Green for available */
+}
+
+#b1 { 
+    top: 65.9%; 
+    left: 37%; 
+}
+#b2 { 
+    top: 57.4%; 
+    left: 37%; 
+}
+#b3 { 
+    top: 49.4%; 
+    left: 37%; 
+}
+#b4 { 
+    top: 41.1%; 
+    left: 37%; 
+}
+#b5 { 
+    top: 32.7%; 
+    left: 37%; 
+}
+#b6 { 
+    top: 24.4%; 
+    left: 37%; 
+}
