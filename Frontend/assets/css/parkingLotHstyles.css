@@ -1,0 +1,116 @@
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#parking-lot {
+    position: relative;
+    width: 836px; /* Width of the image */
+    height: 700px; /* Height of the image */
+    margin: auto;
+    background: url('LotHFinalPic.GIF') no-repeat center center;
+    background-size: contain;
+}
+
+.parking-spot {
+    font-size: 12px;
+    position: absolute;
+    cursor: pointer;
+    pointer-events: auto;
+    width: auto; /* Width of the spot */
+    height: auto; /* Height of the spot */
+    background-color: #3fff00; 
+    border-radius: 5px;
+    color: black;
+    border: none;
+    
+    
+}
+
+.parking-spot.occupied {
+  background-color: #ff4e4e; /* Red for occupied */
+}
+
+.parking-spot.available {
+  background-color: #3fff00; /* Green for available */
+}
+
+
+#h1 { 
+    top: 79.5%; 
+    left: 53.2%; 
+}
+#h2 { 
+    top: 75.2%; 
+    left: 53.2%; 
+}
+#h3 { 
+    top: 70.7%; 
+    left: 53.2%; 
+}
+#h4 { 
+    top: 66.3%; 
+    left: 53.2%; 
+}
+#h5 { 
+    top: 61.9%; 
+    left: 53.2%; 
+}
+#h6 { 
+    top: 57.4%; 
+    left: 53.2%; 
+}
+#h7 { 
+    top: 53%; 
+    left: 53.2%; 
+}
+#h8 { 
+    top: 48.65%; 
+    left: 53.2%; 
+}
+#h9 { 
+    top: 44.1%; 
+    left: 53.2%; 
+}
+#h10 { 
+    top: 30.91%; 
+    left: 70.8%; 
+}
+#h11 { 
+    top: 26.5%; 
+    left: 70.8%; 
+}
+#h12 { 
+    top: 21.99%; 
+    left: 70.8%; 
+}
+#h13 { 
+    top: 17.6%; 
+    left: 70.8%; 
+}
+#h14 { 
+    top: 13.1%; 
+    left: 70.8%; 
+}
+#h15 { 
+    top: 8.7%; 
+    left: 70.8%; 
+}
+#h16 { 
+    top: 25.7%; 
+    left: 32%; 
+}
+#h17 { 
+    top: 25.7%; 
+    left: 35.75%; 
+}
+#h18 { 
+    top: 25.7%; 
+    left: 39.45%; 
+}
+#h19 { 
+    top: 25.7%; 
+    left: 43.15%; 
+}
