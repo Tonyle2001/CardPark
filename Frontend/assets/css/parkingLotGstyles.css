@@ -1,7 +1,6 @@
 body, html {
     
     height: 100%;
-    margin: 175px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,9 +14,6 @@ body, html {
     margin: auto;
     background: url('LotGFinalPic.GIF') no-repeat center center;
     background-size: contain;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
     
     
 }
@@ -25,6 +21,8 @@ body, html {
 .parking-spot {
     font-size: 12.5px;
     position: absolute;
+    cursor: pointer;
+    pointer-events: auto;
     width: auto; /* Width of the spot */
     height: auto; /* Height of the spot */
     background-color: #3fff00; /* Semi-transparent */
@@ -32,6 +30,13 @@ body, html {
     color: black;
     border: none;
     /* Position each spot with 'top' and 'left' in the separate CSS file, e.g., */
+}
+.parking-spot.occupied {
+  background-color: #ff4e4e; /* Red for occupied */
+}
+
+.parking-spot.available {
+  background-color: #3fff00; /* Green for available */
 }
 
 #g1 { 
@@ -178,11 +183,11 @@ body, html {
     top: 84%; 
     left: 40.5%; 
 }
-#hg37 { 
+#g37 { 
     top: 84%; 
     left: 44.6%; 
 }
-#hg38 { 
+#g38 { 
     top: 84%; 
     left: 48.7%; 
 }
