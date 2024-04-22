@@ -3,6 +3,17 @@
   padding: 0;
   box-sizing: border-box;
 }
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    margin-top:0;
+    max-width:300px;
+    max-height: 275px;
+    
+}
 
 .sidenav {
   height: 100%;
@@ -49,9 +60,10 @@
   font-size: 40px;
   cursor: pointer;
   background-color: #860111;
-  color: white;
-  padding: 15px 25px;
-  border-color: black;
+  color: #f8f8ff;
+  padding: 18px 31px;
+  border: 3.5px solid #333333;
+  border-radius:10px;
 }
 
 .openbtn:hover {
@@ -62,7 +74,8 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 50px;
+  font-size: 37px;
+  margin-left: 100px;
 }
 #homeMap .responsive {
   display: block;
@@ -99,7 +112,7 @@ h2 {
   text-indent: -9999px;
 }
 .container .btn:hover{
-    background: rgba(255, 255, 0,0.5);
+    background: rgba(25, 5, 0,0.5);
 }
 .container #btnA{
   top:8%;
@@ -112,12 +125,6 @@ h2 {
 .container #btnC{
   top:20%;
   left:59.8%;
-}
-.container #btnD{
-  top:44.3%;
-  left:56.3%;
-  top:28.8%;
-  left:60.1%;
 }
 .container #btnE{
   top:40.3%;
@@ -159,3 +166,4 @@ h2 {
   top:76%;
   left:49.47%;
 }
+
