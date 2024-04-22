@@ -8,6 +8,8 @@ wrapper.addEventListener('click', (event) => {
 	if(!isButton)
 		return;
 	
+	var ident = event.target.getAttribute('id');
 	
-	window.parent.postMessage('openConfirmDialog', '*');
+	window.parent.postMessage(ident, '*');
+	
 });

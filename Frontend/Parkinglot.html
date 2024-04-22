@@ -7,7 +7,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" href="assets/css/parkingLotstyles.css">
+<link rel="stylesheet" href="assets/css/parkinglot.css">
 
 </head>
 
@@ -34,7 +34,8 @@
 <!-- Top Message showing Reservation times, 5 AM to 9 PM, 30 Min Intervals-->
 <span id="reservationTimes">
   <h2>
-    <label for="startTime">From:</label><select id="start_time" name="startTime" onchange="onChange(this.value)" style="max-width: 90%">
+    <label for="startTime">From:</label>
+    <select id="start_time" name="startTime" onchange="onChange(this.value)" style="max-width: 90%">
     
     <option value="choice" hidden="" disabled="disabled" selected="selected">--Select--</option> //Default Option
     
@@ -77,14 +78,20 @@
       <option value="20:30">8:30</option>
     </optgroup>
     
-  </select><span>
-<label for="endTime"> To:</label>
+  </select>
+  <span>
+    <label for="endTime"> To:</label>
+  </span>
 
-<span id="end_time"> </span> <span id="lotLetter">
-  Lot:
-    <span id="letter"> </span>
+  <span id="end_time"> </span> 
+  <span id="lotLetter">
+    Lot:
+      <span id="letter"> </span>
+  </span>
+  
+</h2>
 
-</span></span></h2></span><!-- Lot Name/Letter --><!-- Container for parking lot image --><!-- Insert chosen lot with parking spot availability -->
+</span><!-- Lot Name/Letter --><!-- Container for parking lot image --><!-- Insert chosen lot with parking spot availability -->
 <div id="iframe-wrapper">
 <iframe id="lot_frame" src="url" title="Lot"></iframe>
 </div> 
