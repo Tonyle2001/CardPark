@@ -3,6 +3,12 @@ function LotBModel() {
     this.restoreState();
 }
 
+//dont use yet
+function getDatabase(){
+    const reservTable = {};
+    return
+}
+
 LotBModel.prototype.setOccupied = function(index) {
     const currentTime = new Date();
     const endTime = new Date(currentTime.getTime() + 10000); // 1 minute

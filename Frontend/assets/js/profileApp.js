@@ -15,6 +15,8 @@ function fetchUserData() {
 
     setTimeout(() => {
         // Simulated user data - replace this with an actual call
+        
+        //add the cookie info here
         const userData = {
         
             fname: 'John',
