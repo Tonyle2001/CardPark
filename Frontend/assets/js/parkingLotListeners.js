@@ -152,7 +152,7 @@ const { check_in } = require("../../../Backend/controllers/reservations");
 				const form = {
 					uid: 1,
 					lid: spot.charAt(0),
-					spot: spot.charAt(1),
+					spot: spot.substring(1),
 					check_in: false,
 					start_time: time,
 					end_time: et
