@@ -14,7 +14,6 @@ function setupListeners(view, model) {
         });
     });
 }
-
 const wrapper = document.getElementById('parking-lot');
 
 //Event listener for all buttons within the parking lot
@@ -30,3 +29,4 @@ wrapper.addEventListener('click', (event) => {
 	window.parent.postMessage(ident, '*');
 	
 });
+

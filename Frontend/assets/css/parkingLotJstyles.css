@@ -1,0 +1,666 @@
+body, html {
+    
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#parking-lot {
+    position: relative;
+    width: 836px; /* Width of the image */
+    height: 541px; /* Height of the image */
+    margin: auto;
+    background: url('LotJFinalPic.GIF') no-repeat center center;
+    background-size: contain;
+}
+
+.parking-spot {
+    font-size: 9.5px;
+    position: absolute;
+    cursor: pointer;
+    pointer-events: auto;
+    width: auto; /* Width of the spot */
+    height: auto; /* Height of the spot */
+    background-color: #3fff00; 
+    border-radius: 2.5px;
+    color: black;
+    border: none;
+    padding-left: 0.75px;
+    padding-right: 0.75px;
+
+    
+}
+
+.parking-spot.occupied {
+  background-color: #ff4e4e; /* Red for occupied */
+}
+
+.parking-spot.available {
+  background-color: #3fff00; /* Green for available */
+}
+
+#j1 { 
+    top: 20.8%; 
+    left: 7.8%; 
+}
+#j2 { 
+    top: 20.8%; 
+    left: 10.25%; 
+}
+#j3 { 
+    top: 20.8%; 
+    left: 12.6%; 
+}
+#j4 { 
+    top: 20.8%; 
+    left: 15.05%; 
+}
+#j5 { 
+    top: 20.8%; 
+    left: 17.4%; 
+}
+#j6 { 
+    top: 20.8%; 
+    left: 19.8%; 
+}
+#j7 { 
+    top: 20.8%; 
+    left: 22.2%; 
+}
+#j8 { 
+    top: 20.8%; 
+    left: 24.65%; 
+}
+#j9 { 
+    top: 20.8%; 
+    left: 38.9%; 
+}
+#j10 { 
+    top: 20.8%; 
+    left: 40.9%; 
+}
+#j11 { 
+    top: 20.8%; 
+    left: 43.3%; 
+}
+#j12 { 
+    top: 20.8%; 
+    left: 45.7%; 
+}
+#j13 { 
+    top: 20.8%; 
+    left: 48.1%; 
+}
+#j14 { 
+    top: 20.8%; 
+    left: 50.5%; 
+}
+#j15 { 
+    top: 20.8%; 
+    left: 52.9%; 
+}
+#j16 { 
+    top: 20.8%; 
+    left: 55.3%; 
+}
+#j17 { 
+    top: 20.8%; 
+    left: 57.7%; 
+}
+#j18 { 
+    top: 20.8%; 
+    left: 60.1%; 
+}
+#j19 { 
+    top: 20.8%; 
+    left: 62.5%; 
+}
+#j20 { 
+    top: 20.8%; 
+    left: 64.85%; 
+}
+#j21 { 
+    top: 20.8%; 
+    left: 67.3%; 
+}
+#j22 { 
+    top: 20.8%; 
+    left: 69.7%; 
+}
+#j23 { 
+    top: 20.8%; 
+    left: 72.1%; 
+}
+#j24 { 
+    top: 38.1%; 
+    left: 67.95%; 
+}
+#j25 { 
+    top: 38.1%; 
+    left: 65.6%; 
+}
+#j26 { 
+    top: 38.1%; 
+    left: 63.15%; 
+}
+#j27 { 
+    top: 38.1%; 
+    left: 60.8%; 
+}
+#j28 { 
+    top: 38.1%; 
+    left: 58.35%; 
+}
+#j29 { 
+    top: 38.1%; 
+    left: 55.95%; 
+}
+#j30 { 
+    top: 38.1%; 
+    left: 53.6%; 
+}
+#j31 { 
+    top: 38.1%; 
+    left: 51.25%; 
+}
+#j32 { 
+    top: 38.1%; 
+    left: 48.75%; 
+}
+#j33 { 
+    top: 38.1%; 
+    left: 46.4%; 
+}
+#j34 { 
+    top: 38.1%; 
+    left: 44%; 
+}
+#j35 { 
+    top: 38.1%; 
+    left: 41.6%; 
+}
+#j36 { 
+    top: 38.1%; 
+    left: 39.2%; 
+}
+#j37 { 
+    top: 38.1%; 
+    left: 36.85%; 
+}
+#j38 { 
+    top: 38.1%; 
+    left: 34.45%; 
+}
+#j39 { 
+    top: 38.1%; 
+    left: 32%; 
+}
+#j40 { 
+    top: 38.1%; 
+    left: 29.65%; 
+}
+#j41 { 
+    top: 38.1%; 
+    left: 27.25%; 
+}
+#j42 { 
+    top: 38.1%; 
+    left: 24.85%; 
+}
+#j43 { 
+    top: 38.1%; 
+    left: 22.45%; 
+}
+#j44 { 
+    top: 38.1%; 
+    left: 20.1%; 
+}
+#j45 { 
+    top: 38.1%; 
+    left: 17.7%; 
+}
+#j46 { 
+    top: 38.1%; 
+    left: 15.25%; 
+}
+#j47 { 
+    top: 38.1%; 
+    left: 12.85%; 
+}
+#j48 { 
+    top: 38.1%; 
+    left: 10.45%; 
+}
+#j49 { 
+    top: 35.8%; 
+    left: 2.7%; 
+}
+#j50 { 
+    top: 49.8%; 
+    left: 2.7%; 
+}
+#j51 { 
+    top: 45.9%; 
+    left: 10.45%; 
+}
+#j52 { 
+    top: 45.9%; 
+    left: 12.8%; 
+}
+#j53 { 
+    top: 45.9%; 
+    left: 15.25%; 
+}
+#j54 { 
+    top: 45.9%; 
+    left: 17.65%; 
+}
+#j55 { 
+    top: 45.9%; 
+    left: 20.05%; 
+}
+#j56 { 
+    top: 45.9%; 
+    left: 22.45%; 
+}
+#j57 { 
+    top: 45.9%; 
+    left: 24.85%; 
+}
+#j58 { 
+    top: 45.9%; 
+    left: 27.2%; 
+}
+#j59 { 
+    top: 45.9%; 
+    left: 29.6%; 
+}
+#j60 { 
+    top: 45.9%; 
+    left: 32%; 
+}
+#j61 { 
+    top: 45.9%; 
+    left: 34.4%; 
+}
+#j62 { 
+    top: 45.9%; 
+    left: 36.85%; 
+}
+#j63 { 
+    top: 45.9%; 
+    left: 39.2%; 
+}
+#j64 { 
+    top: 45.9%; 
+    left: 41.6%; 
+}
+#j65 { 
+    top: 45.9%; 
+    left: 44%; 
+}
+#j66 { 
+    top: 45.9%; 
+    left: 46.4%; 
+}
+#j67 { 
+    top: 45.9%; 
+    left: 48.75%; 
+}
+#j68 { 
+    top: 45.9%; 
+    left: 51.2%; 
+}
+#j69 { 
+    top: 45.9%; 
+    left: 53.6%; 
+}
+#j70 { 
+    top: 45.9%; 
+    left: 55.95%; 
+}
+#j71 { 
+    top: 45.9%; 
+    left: 58.4%; 
+}
+#j72 { 
+    top: 45.9%; 
+    left: 60.75%; 
+}
+#j73 { 
+    top: 45.9%; 
+    left: 63.15%; 
+}
+#j74 { 
+    top: 45.9%; 
+    left: 65.55%; 
+}
+#j75 { 
+    top: 45.9%; 
+    left: 67.95%; 
+}
+#j76 { 
+    top: 61.8%; 
+    left: 24%; 
+}
+#j77 { 
+    top: 61.8%; 
+    left: 26.4%; 
+}
+#j78 { 
+    top: 61.8%; 
+    left: 28.8%; 
+}
+#j79 { 
+    top: 61.8%; 
+    left: 31.2%; 
+}
+#j80 { 
+    top: 61.8%; 
+    left: 33.6%; 
+}
+#j81 { 
+    top: 61.8%; 
+    left: 35.95%; 
+}
+#j82 { 
+    top: 61.8%; 
+    left: 38.4%; 
+}
+#j83 { 
+    top: 61.8%; 
+    left: 40.8%; 
+}
+#j84 { 
+    top: 61.8%; 
+    left: 43.15%; 
+}
+#j85 { 
+    top: 61.8%; 
+    left: 45.6%; 
+}
+#j86 { 
+    top: 61.8%; 
+    left: 47.99%; 
+}
+#j87 { 
+    top: 61.8%; 
+    left: 50.4%; 
+}
+#j88 { 
+    top: 61.8%; 
+    left: 52.75%; 
+}
+#j89 { 
+    top: 61.8%; 
+    left: 55.15%; 
+}
+#j90 { 
+    top: 61.8%; 
+    left: 57.55%; 
+}
+#j91 { 
+    top: 61.8%; 
+    left: 59.9%; 
+}
+#j92 { 
+    top: 61.8%; 
+    left: 62.3%; 
+}
+#j93 { 
+    top: 61.8%; 
+    left: 64.75%; 
+}
+#j94 { 
+    top: 61.8%; 
+    left: 67.15%; 
+}
+#j95 { 
+    top: 61.8%; 
+    left: 69.5%; 
+}
+#j96 { 
+    top: 61.8%; 
+    left: 71.9%; 
+}
+#j97 { 
+    top: 61.8%; 
+    left: 74.3%; 
+}
+#j98 { 
+    top: 74.4%; 
+    left: 72.1%; 
+}
+#j99 { 
+    top: 74.4%; 
+    left: 69.65%; 
+}
+#j100 { 
+    top: 74.4%; 
+    left: 66.95%; 
+}
+#j101 { 
+    top: 74.4%; 
+    left: 64.55%; 
+}
+#j102 { 
+    top: 74.4%; 
+    left: 62.15%; 
+}
+#j103 { 
+    top: 74.4%; 
+    left: 59.75%; 
+}
+#j104 { 
+    top: 74.4%; 
+    left: 57.35%; 
+}
+#j105 { 
+    top: 74.4%; 
+    left: 55%; 
+}
+#j106 { 
+    top: 74.4%; 
+    left: 52.55%; 
+}
+#j107 { 
+    top: 74.4%; 
+    left: 50.15%; 
+}
+#j108 { 
+    top: 74.4%; 
+    left: 47.75%; 
+}
+#j109 { 
+    top: 74.4%; 
+    left: 45.35%; 
+}
+#j110 { 
+    top: 74.4%; 
+    left: 42.95%; 
+}
+#j111 { 
+    top: 74.4%; 
+    left: 40.6%; 
+}
+#j112 { 
+    top: 74.4%; 
+    left: 38.2%; 
+}#j113 { 
+    top: 74.4%; 
+    left: 35.8%; 
+}
+#j114 { 
+    top: 74.4%; 
+    left: 33.4%; 
+}
+#j115 { 
+    top: 74.4%; 
+    left: 31%; 
+}
+#j116 { 
+    top: 74.4%; 
+    left: 28.6%; 
+}
+#j117 { 
+    top: 74.4%; 
+    left: 26.25%; 
+}
+#j118 { 
+    top: 74.4%; 
+    left: 4.3%; 
+}
+#j119 { 
+    top: 78.15%; 
+    left: 4.3%; 
+}
+#j120 { 
+    top: 81.95%; 
+    left: 4.3%; 
+}
+#j121 { 
+    top: 86.35%; 
+    left: 11.75%; 
+}
+#j122 { 
+    top: 86.35%; 
+    left: 14.15%; 
+}
+#j123 { 
+    top: 86.35%; 
+    left: 16.55%; 
+}
+#j124 { 
+    top: 86.35%; 
+    left: 18.95%; 
+}
+#j125 { 
+    top: 86.35%; 
+    left: 21.35%; 
+}
+#j126 { 
+    top: 86.35%; 
+    left: 23.75%; 
+}
+#j127 { 
+    top: 86.35%; 
+    left: 26.15%; 
+}
+#j128 { 
+    top: 86.35%; 
+    left: 28.55%; 
+}
+#j129 { 
+    top: 86.35%; 
+    left: 30.95%; 
+}
+#j130 { 
+    top: 86.35%; 
+    left: 33.33%; 
+}
+#j131 { 
+    top: 86.35%; 
+    left: 35.7%; 
+}
+#j132 { 
+    top: 86.35%; 
+    left: 38.1%; 
+}
+#j133 { 
+    top: 86.35%; 
+    left: 40.55%; 
+}
+#j134 { 
+    top: 86.35%; 
+    left: 42.95%; 
+}
+#j135 { 
+    top: 86.35%; 
+    left: 45.35%; 
+}
+#j136 { 
+    top: 86.35%; 
+    left: 47.7%; 
+}
+#j137 { 
+    top: 86.35%; 
+    left: 50.1%; 
+}
+#j138 { 
+    top: 86.35%; 
+    left: 52.5%; 
+}
+#j139 { 
+    top: 86.35%; 
+    left: 54.9%; 
+}
+#j140 { 
+    top: 86.35%; 
+    left: 57.3%; 
+}
+#j141 { 
+    top: 86.35%; 
+    left: 59.7%; 
+}
+#j142 { 
+    top: 86.35%; 
+    left: 62.1%; 
+}
+#j143 { 
+    top: 86.35%; 
+    left: 64.5%; 
+}
+#j144 { 
+    top: 86.35%; 
+    left: 66.85%; 
+}
+#j145 { 
+    top: 86.35%; 
+    left: 69.25%; 
+}
+#j146 { 
+    top: 86.35%; 
+    left: 71.65%; 
+}
+#j147 { 
+    top: 86.35%; 
+    left: 74.05%; 
+}
+#j148 { 
+    top: 86.35%; 
+    left: 76.5%; 
+}
+#j149 { 
+    top: 86.35%; 
+    left: 78.9%; 
+}
+#j150 { 
+    top: 86.35%; 
+    left: 81.2%; 
+}
+#j151 { 
+    top: 86.35%; 
+    left: 83.65%; 
+}
+#j152 { 
+    top: 86.35%; 
+    left: 86.05%; 
+}
+#j153 { 
+    top: 80.45%; 
+    left: 93.55%; 
+}
+#j154 { 
+    top: 76.85%; 
+    left: 93.55%; 
+}
+#j155 { 
+    top: 73.15%; 
+    left: 93.55%; 
+}
+
+#j156 { 
+    top: 67.3%; 
+    left: 2.55%; 
+}

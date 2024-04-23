@@ -14,7 +14,6 @@ function setupListeners(view, model) {
         });
     });
 }
-
 const wrapper = document.getElementById('parking-lot');
 
 //Event listener for all buttons within the parking lot

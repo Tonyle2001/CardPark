@@ -1,0 +1,113 @@
+body, html {
+
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#parking-lot {
+    position: relative;
+    width: 836px; /* Width of the image */
+    height: 541px; /* Height of the image */
+    margin: auto;
+    background: url('LotEFinalPic.GIF') no-repeat center center;
+    background-size: contain;
+}
+
+.parking-spot {
+    font-size: 17px;
+    position: absolute;
+    cursor: pointer;
+    pointer-events: auto;
+    width: auto; /* Width of the spot */
+    height: auto; /* Height of the spot */
+    background-color: #3fff00; /* Semi-transparent */
+    border-radius: 5px;
+    color: black;
+    border: none;
+    /* Position each spot with 'top' and 'left' in the separate CSS file, e.g., */
+    
+}
+
+.parking-spot.occupied {
+  background-color: #ff4e4e; /* Red for occupied */
+}
+
+.parking-spot.available {
+  background-color: #3fff00; /* Green for available */
+}
+
+
+#e1 { 
+    top: 16.8%; 
+    left: 24.8%; 
+}
+#e2 { 
+    top: 16.8%; 
+    left: 29.9%; 
+}
+#e3 { 
+    top: 16.8%; 
+    left: 35%; 
+}
+#e4 { 
+    top: 16.8%; 
+    left: 40.1%; 
+}
+#e5 { 
+    top: 16.8%; 
+    left: 45.2%; 
+}
+#e6 { 
+    top: 16.8%; 
+    left: 50.2%; 
+}
+#e7 { 
+    top: 16.8%; 
+    left: 55.2%; 
+}
+#e8 { 
+    top: 16.8%; 
+    left: 60.35%; 
+}
+#e9 { 
+    top: 16.8%; 
+    left: 65.35%; 
+}
+#e10 { 
+    top: 16.8%; 
+    left: 69.9%; 
+}
+#e11 { 
+    top: 26.6%; 
+    left: 80%; 
+}
+#e12 { 
+    top: 34.2%; 
+    left: 80%; 
+}
+#e13 { 
+    top: 42%; 
+    left: 80%; 
+}
+#e14 { 
+    top: 52%; 
+    left: 56.85%; 
+}
+#e15 { 
+    top: 52%; 
+    left: 51.85%; 
+}
+#e16 { 
+    top: 52%; 
+    left: 46.75%; 
+}
+#e17 { 
+    top: 52%; 
+    left: 41.75%; 
+}
+#e18 { 
+    top: 52%; 
+    left: 36.65%; 
+}

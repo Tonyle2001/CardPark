@@ -1,0 +1,234 @@
+body, html {
+    
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#parking-lot {
+    position: relative;
+    width: 836px; /* Width of the image */
+    height: 541px; /* Height of the image */
+    margin: auto;
+    background: url('LotFFinalPic.GIF') no-repeat center center;
+    background-size: contain;
+}
+
+.parking-spot {
+    font-size: 11.5px;
+    position: absolute;
+    cursor: pointer;
+    pointer-events: auto;
+    width: auto; /* Width of the spot */
+    height: auto; /* Height of the spot */
+    background-color: #3fff00; /* Semi-transparent */
+    border-radius: 5px;
+    color: black;
+    border: none;
+    /* Position each spot with 'top' and 'left' in the separate CSS file, e.g., */
+}
+.parking-spot.occupied {
+  background-color: #ff4e4e; /* Red for occupied */
+}
+
+.parking-spot.available {
+  background-color: #3fff00; /* Green for available */
+}
+
+#f1 { 
+    top: 76%; 
+    left: 21.9%; 
+}
+#f2 { 
+    top: 70.8%; 
+    left: 21.9%; 
+}
+#f3 { 
+    top: 65.7%; 
+    left: 21.9%; 
+}
+#f4 { 
+    top: 60.7%; 
+    left: 21.9%; 
+}
+#f5 { 
+    top: 55.5%; 
+    left: 21.9%; 
+}
+#f6 { 
+    top: 50.4%; 
+    left: 21.9%; 
+}
+#f7 { 
+    top: 45.2%; 
+    left: 21.9%; 
+}
+#f8 { 
+    top: 40%; 
+    left: 21.9%; 
+}
+#f9 { 
+    top: 35%; 
+    left: 21.9%; 
+}
+#f10 { 
+    top: 29.7%; 
+    left: 21.2%; 
+}
+#f11 { 
+    top: 24.6%; 
+    left: 21.2%; 
+}
+#f12 { 
+    top: 19.6%; 
+    left: 21.2%; 
+}
+#f13 { 
+    top: 14.2%; 
+    left: 21.2%; 
+}
+#f14 { 
+    top: 75%; 
+    left: 38.2%; 
+}
+#f15 { 
+    top: 70%; 
+    left: 38.2%; 
+}
+#f16 { 
+    top: 64.9%; 
+    left: 38.2%; 
+}
+#f17 { 
+    top: 59.8%; 
+    left: 38.2%; 
+}
+#f18 { 
+    top: 54.7%; 
+    left: 38.2%; 
+}
+#f19 { 
+    top: 49.6%; 
+    left: 38.2%; 
+}
+#f20 { 
+    top: 44.5%; 
+    left: 38.2%; 
+}
+#f21 { 
+    top: 39.3%; 
+    left: 38.2%; 
+}
+#f22 { 
+    top: 34.2%; 
+    left: 38.2%; 
+}
+#f23 { 
+    top: 29.1%; 
+    left: 38.2%; 
+}
+#f24 { 
+    top: 23.8%; 
+    left: 38.2%; 
+}
+#f25 { 
+    top: 18.7%; 
+    left: 38.2%; 
+}
+#f26 { 
+    top: 18.7%; 
+    left: 47.8%; 
+}
+#f27 { 
+    top: 23.8%; 
+    left: 47.8%; 
+}
+#f28 { 
+    top: 28.9%; 
+    left: 47.8%; 
+}
+#f29 { 
+    top: 34%; 
+    left: 47.8%; 
+}
+#f30 { 
+    top: 39.1%; 
+    left: 47.8%; 
+}
+#f31 { 
+    top: 44.3%; 
+    left: 47.8%; 
+}
+#f32 { 
+    top: 49.5%; 
+    left: 47.8%; 
+}
+#f33 { 
+    top: 54.7%; 
+    left: 47.8%; 
+}
+#f34 { 
+    top: 59.7%; 
+    left: 47.8%; 
+}
+#f35 { 
+    top: 64.8%; 
+    left: 47.8%; 
+}
+#f36 { 
+    top: 70%; 
+    left: 47.8%; 
+}
+#f37 { 
+    top: 75%; 
+    left: 47.8%; 
+}
+#f38{
+    top: 21.6%;
+    left: 65.2%;
+}
+#f39{
+    top: 26.6%;
+    left: 65.2%;
+}
+#f40{
+    top: 31.8%;
+    left: 65.2%;
+}
+#f41{
+    top: 36.8%;
+    left: 65.2%;
+}
+#f42{
+    top: 42%;
+    left: 65.2%;
+}
+#f43{
+    top: 47.2%;
+    left: 65.2%;
+}
+#f44{
+    top: 52.4%;
+    left: 65.2%;
+}
+#f45{
+    top: 57.6%;
+    left: 65.2%;
+}
+#f46{
+    top: 62.6%;
+    left: 65.2%;
+}
+#f47{
+    top: 67.6%;
+    left: 65.2%;
+}
+#f48{
+    top: 72.8%;
+    left: 65.2%;
+}
+
+
+
