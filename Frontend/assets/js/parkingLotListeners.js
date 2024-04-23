@@ -1,3 +1,5 @@
+const { response } = require("express");
+const { check_in } = require("../../../Backend/controllers/reservations");
 
 	var sel = document.getElementById('start_time');
 	var end = document.getElementById('end_time');
@@ -144,6 +146,35 @@
 			 else if(confirm('Is Spot ' + spot + ' Okay?')) {
 				// If 'Okay' is clicked, send spot id and res time to backend. 
 				time = sel.value;
+				console.log(time);
+				console.log(et);
+				console.log(spot);
+				const form = {
+					uid: 1,
+					lid: spot.charAt(0),
+					spot: spot.charAt(1),
+					check_in: false,
+					start_time: time,
+					end_time: et
+				  };
+				const payload = new URLSearchParams(form)
+				fetch('http://localhost:3000/reservations/add', {
+					method: "POST",
+					headers: {
+					  "Content-Type": "application/x-www-form-urlencoded"
+				  },
+				  	body: payload,
+				})
+				.then(response =>{
+					if (!response.ok) {
+						throw new Error('network returns error');
+					  }
+				})
+				.then(data => console.log(data))
+				.catch((error) => {
+					// Handle error
+					console.log("error ", error);
+				});
 			}
 			
 			 else{

@@ -8,7 +8,12 @@ function setCookie(cname,cvalue,exdays) {
   let expires = "expires=" + d.toUTCString();
   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
-
+function delete_cookie( name, path ) {
+      document.cookie = name +
+        ";expires=Thu, 01 Jan 1970 00:00:01 GMT;"+
+        ((path) ? ";path="+path:"");
+    
+}
 function getCookie(cname) {
   let name = cname + "=";
   let decodedCookie = decodeURIComponent(document.cookie);
@@ -27,20 +32,25 @@ function getCookie(cname) {
 
 function checkCookie() {
   let user = getCookie("username");
+  console.log(document.cookie.path);
   if (user != "") {
     alert("Welcome again " + user);
-  } else {
+  } 
+  else {
      user = prompt("Please enter your name:","");
      if (user != "" && user != null) {
        setCookie("username", user, 30);
      }
   }
 }
+document.querySelector('.submit').addEventListener("submit", (e) =>{
+    delete_cookie("username", "/" );
+    console.log(e);
+  });
 </script>
 </head>
 
 <body onload="checkCookie()"></body>
 <a href="test2.html">continue</a>
-
-
+<button type="submit" id=" delete">Delete Cookie</button>
 </html>
