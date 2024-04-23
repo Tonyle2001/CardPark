@@ -158,6 +158,7 @@ const { check_in } = require("../../../Backend/controllers/reservations");
 					end_time: et
 				  };
 				const payload = new URLSearchParams(form)
+				//change local host address just incase of errors
 				fetch('http://localhost:3000/reservations/add', {
 					method: "POST",
 					headers: {
