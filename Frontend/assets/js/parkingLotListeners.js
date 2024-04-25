@@ -1,5 +1,5 @@
-const { response } = require("express");
-const { check_in } = require("../../../Backend/controllers/reservations");
+// const { response } = require("express");
+// const { check_in } = require("../../../Backend/controllers/reservations");
 
 	var sel = document.getElementById('start_time');
 	var end = document.getElementById('end_time');
@@ -10,6 +10,7 @@ const { check_in } = require("../../../Backend/controllers/reservations");
   
   	var choice = sel.value;
 	var et;
+	var end_time;
 
 	  //Placeholder select option
 		if(choice == "choice")
@@ -113,7 +114,9 @@ const { check_in } = require("../../../Backend/controllers/reservations");
 		   
 				//If reservation time is a single-digit hour time			
 				t = t + 2;
+				end_time = t;
 				if(et == "0:00")
+					end_time = value.replace(value.charAt(0), t);
 					et = (value.replace(value.charAt(0), t) + " AM");
 				
 				end.innerHTML = et;
@@ -150,14 +153,15 @@ const { check_in } = require("../../../Backend/controllers/reservations");
 				console.log(et);
 				console.log(spot);
 				const form = {
-					uid: 1,
+					uid: 135,
 					lid: spot.charAt(0),
 					spot: spot.substring(1),
 					check_in: false,
 					start_time: time,
-					end_time: et
-				  };
-				const payload = new URLSearchParams(form)
+					end_time: end_time
+				};
+				payload = JSON.stringify(form);
+				console.log(payload);
 				//change local host address just incase of errors
 				fetch('http://localhost:3000/reservations/add', {
 					method: "POST",

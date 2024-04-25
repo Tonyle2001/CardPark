@@ -27,6 +27,33 @@ function fetchUserData() {
             
             uid: '12345'
         };
+        const info = {
+            uid: '12345'
+        };
+        const outputInfo = {};
+        const payload = new URLSearchParams(info)
+        console.log([...payload]);
+
+        fetch('http://localhost:3000/user/getByID', {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded"
+          },
+              body: info,
+        })
+        .then(response =>{
+            if (!response.ok) {
+                throw new Error('network returns error');
+                }
+        })
+        .then(data =>{
+            console.log(data);
+            outputInfo = data;
+        })
+        .catch((error) => {
+            // Handle error
+            console.log("error ", error);
+        });
 
         // Update the UI with the fetched data
         document.getElementById('fname').textContent = userData.fname;

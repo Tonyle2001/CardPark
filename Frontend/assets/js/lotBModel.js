@@ -5,8 +5,18 @@ function LotBModel() {
 
 //dont use yet
 function getDatabase(){
-    const reservTable = {};
-    return
+    fetch('http://localhost:3000/reservations')
+    .then(response =>{
+        if (!response.ok) {
+            throw new Error('network returns error');
+            }
+        return response;
+    })
+    .then(data => console.log(data))
+    .catch((error) => {
+        // Handle error
+        console.log("error ", error);
+    });
 }
 
 LotBModel.prototype.setOccupied = function(index) {
