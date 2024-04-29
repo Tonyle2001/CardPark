@@ -130,7 +130,7 @@
 					et = "10:00";
 				if(value == "20:30")
 					et = "10:30";
-				
+				end_time = et;
 				end.innerHTML = et + " PM";
 			}
 	   }
@@ -158,7 +158,7 @@
 					spot: spot.substring(1),
 					check_in: false,
 					start_time: time,
-					end_time: end_time
+					end_time: end_time,
 				};
 				payload = JSON.stringify(form);
 				console.log(payload);
