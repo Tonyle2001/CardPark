@@ -130,7 +130,10 @@
 					et = "10:00";
 				if(value == "20:30")
 					et = "10:30";
-				end_time = et;
+
+				//end_time = parseInt(value.charAt(0)) + 14;
+				end_time = value.replace(value.charAt(1), t + 2);
+				console.log(end_time);
 				end.innerHTML = et + " PM";
 			}
 	   }
@@ -150,7 +153,7 @@
 				// If 'Okay' is clicked, send spot id and res time to backend. 
 				time = sel.value;
 				console.log(time);
-				console.log(et);
+				console.log(end_time);
 				console.log(spot);
 				const form = {
 					uid: 135,
