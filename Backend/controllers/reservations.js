@@ -32,7 +32,7 @@ function getByUID(req, res) {
   
     let lid = req.params.lid;
   
-    dbConn.query('SELECT * FROM Reservations where lid = ?', lid, function(err, result){
+    dbConn.query('SELECT LID, spot_num FROM Reservations where lid = ?', lid, function(err, result){
   
         if(err) {
           res.status(500).send({ message: err.message });

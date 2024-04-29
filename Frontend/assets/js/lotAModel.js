@@ -22,16 +22,19 @@ LotAModel.prototype.setOccupied = function(index, occupied) {
 LotAModel.prototype._commit = function(index, occupied) {
 
     //This will output data from the table in the database of lot A
-    fetch('http://localhost:3000/reservation/getByLID/A')
-    .then(response =>{
-        if (!response.ok) {
-            throw new Error('network returns error');
-            }
+    fetch('http://localhost:3000/reservations/lot/A', {
+        method: "GET"
     })
-    .then(data => console.log(data))
-    .catch((error) => {
-        // Handle error
-        console.log("error ", error);
-    });
+      .then(response =>{
+          if (!response.ok) {
+              throw new Error('network returns error');
+            }
+            return response.json();
+      })
+      .then(data => console.log(data))
+      .catch((error) => {
+          // Handle error
+          console.log("error ", error);
+      });
 };
 

@@ -178,6 +178,7 @@
 					if (!response.ok) {
 						throw new Error('network returns error');
 					  }
+					return response.json();
 				})
 				.then(data => console.log(data))
 				.catch((error) => {
