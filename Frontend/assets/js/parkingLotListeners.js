@@ -160,7 +160,8 @@
 					start_time: time,
 					end_time: end_time,
 				};
-				payload = JSON.stringify(form);
+				//payload = JSON.stringify(form);
+				const payload = new URLSearchParams(form)
 				console.log(payload);
 				//change local host address just incase of errors
 				fetch('http://localhost:3000/reservations/add', {
