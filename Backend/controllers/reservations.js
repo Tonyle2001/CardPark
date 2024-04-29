@@ -28,6 +28,20 @@ function getByUID(req, res) {
     });
   }
 
+  function getByLID(req, res) {
+  
+    let lid = req.params.lid;
+  
+    dbConn.query('SELECT * FROM Reservations where lid = ?', lid, function(err, result){
+  
+        if(err) {
+          res.status(500).send({ message: err.message });
+        } else {
+            res.status(200).send({ reservations:result });
+        }
+    });
+  }
+
 function addReservation(req, res) {
     
     let params = req.body;
@@ -102,6 +116,7 @@ function check_in(req, res) {
 module.exports = {
     getAll,
     getByUID,
+    getByLID,
     addReservation,
     deleteByUID,
     deleteAll,

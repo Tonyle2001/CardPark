@@ -21,27 +21,17 @@ LotAModel.prototype.setOccupied = function(index, occupied) {
 // Simulate a commit to the server
 LotAModel.prototype._commit = function(index, occupied) {
 
-    fetch(`/api/spots/${index}`, {
-    
-        method: 'POST',
-        
-        headers: {
-        
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ occupied: occupied })
+    //This will output data from the table in the database of lot A
+    fetch('http://localhost:3000/reservation/getByLID/A')
+    .then(response =>{
+        if (!response.ok) {
+            throw new Error('network returns error');
+            }
     })
-    .then(response => response.json())
-    
-    .then(data => {
-    
-        console.log('Spot update success:', data);
-        
-    })
-    
-    .catch(error => {
-    
-        console.error('Error updating spot:', error);
+    .then(data => console.log(data))
+    .catch((error) => {
+        // Handle error
+        console.log("error ", error);
     });
 };
 
