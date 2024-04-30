@@ -1,4 +1,6 @@
 function LotIModel() {
+    //this is just in case you want to 
+    //localStorage.clear();
     this.spots = JSON.parse(localStorage.getItem('parkingSpots')) || new Array(53).fill({occupied: false, timeoutEnd: null});
     fetch('http://localhost:3000/reservations/lot/I')
     .then(response =>{
