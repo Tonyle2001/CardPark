@@ -1,10 +1,10 @@
 function LotBModel() {
+    //this is just in case you want to 
+    //localStorage.clear();
     this.spots = JSON.parse(localStorage.getItem('parkingSpots')) || new Array(6).fill({occupied: false, timeoutEnd: null});
-    this.restoreState();
-}
-
-//dont use yet
-function getDatabase(){
+    //Lane: Add this snippet of code to all lotModel from A-P
+    // Copy from fetch to catch
+    //Then paste in between this.spot and this.restoreState()
     fetch('http://localhost:3000/reservations/lot/B')
     .then(response =>{
         if (!response.ok) {
@@ -12,12 +12,28 @@ function getDatabase(){
             }
         return response.json();
     })
-    .then(data => console.log(data))
+    .then(data => {
+        console.log(data.reservations);
+        console.log(data.reservations[0].spot_num);
+        for(i = 0; i < data.reservations.length; i++){
+            const ct = new Date();
+            const et = new Date(ct.getTime() + (120*60000)); // 120 minute
+            this.spots[data.reservations[i].spot_num - 1]= {
+                occupied: true,
+                timeoutEnd: et.getTime()
+            };
+            this._commit();
+            this._startTimeout(data.reservations[i].spot_num - 1, (120*60000));
+        }
+
+    })
     .catch((error) => {
         // Handle error
         console.log("error ", error);
     });
+    this.restoreState();
 }
+
 
 LotBModel.prototype.setOccupied = function(index) {
     const currentTime = new Date();
@@ -42,7 +58,6 @@ LotBModel.prototype._startTimeout = function(index, delay) {
 };
 
 LotBModel.prototype._commit = function() {
-    getDatabase();
     console.log(this.spots);
     localStorage.setItem('parkingSpots', JSON.stringify(this.spots));
 };
