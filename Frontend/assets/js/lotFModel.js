@@ -1,5 +1,31 @@
 function LotFModel() {
     this.spots = JSON.parse(localStorage.getItem('parkingSpots')) || new Array(48).fill({occupied: false, timeoutEnd: null});
+    fetch('http://localhost:3000/reservations/lot/F')
+    .then(response =>{
+        if (!response.ok) {
+            throw new Error('network returns error');
+            }
+        return response.json();
+    })
+    .then(data => {
+        console.log(data.reservations);
+        console.log(data.reservations[0].spot_num);
+        for(i = 0; i < data.reservations.length; i++){
+            const ct = new Date();
+            const et = new Date(ct.getTime() + (120*60000)); // 120 minute
+            this.spots[data.reservations[i].spot_num - 1]= {
+                occupied: true,
+                timeoutEnd: et.getTime()
+            };
+            this._commit();
+            this._startTimeout(data.reservations[i].spot_num - 1, (120*60000));
+        }
+
+    })
+    .catch((error) => {
+        // Handle error
+        console.log("error ", error);
+    });
     this.restoreState();
 }
 
