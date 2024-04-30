@@ -5,12 +5,12 @@ function LotBModel() {
 
 //dont use yet
 function getDatabase(){
-    fetch('http://localhost:3000/reservations')
+    fetch('http://localhost:3000/reservations/lot/B')
     .then(response =>{
         if (!response.ok) {
             throw new Error('network returns error');
             }
-        return response;
+        return response.json();
     })
     .then(data => console.log(data))
     .catch((error) => {
@@ -42,6 +42,8 @@ LotBModel.prototype._startTimeout = function(index, delay) {
 };
 
 LotBModel.prototype._commit = function() {
+    getDatabase();
+    console.log(this.spots);
     localStorage.setItem('parkingSpots', JSON.stringify(this.spots));
 };
 
