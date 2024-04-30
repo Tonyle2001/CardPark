@@ -1,44 +1,80 @@
 function LotAModel() {
-    this.spots = [];  // This will hold the parking spot data from the server
-}
-
-function getDatabase(){
-    fetch('http://localhost:3000/reservations')
+    //this is just in case you want to 
+    //localStorage.clear();
+    this.spots = JSON.parse(localStorage.getItem('parkingSpots')) || new Array(103).fill({occupied: false, timeoutEnd: null});
+    //Lane: Add this snippet of code to all lotModel from A-P
+    // Copy from fetch to catch
+    //Then paste in between this.spot and this.restoreState()
+    fetch('http://localhost:3000/reservations/lot/A')
     .then(response =>{
         if (!response.ok) {
             throw new Error('network returns error');
             }
         return response.json();
     })
-    .then(data => console.log(data))
+    .then(data => {
+        console.log(data.reservations);
+        console.log(data.reservations[0].spot_num);
+        for(i = 0; i < data.reservations.length; i++){
+            const ct = new Date();
+            const et = new Date(ct.getTime() + (120*60000)); // 120 minute
+            this.spots[data.reservations[i].spot_num - 1]= {
+                occupied: true,
+                timeoutEnd: et.getTime()
+            };
+            this._commit();
+            this._startTimeout(data.reservations[i].spot_num - 1, (120*60000));
+        }
+
+    })
     .catch((error) => {
         // Handle error
         console.log("error ", error);
     });
+    this.restoreState();
 }
 
-// Method to set spots with fetched data from the server
-LotAModel.prototype.setSpots = function(spotsData) {
-    this.spots = spotsData;
+
+LotAModel.prototype.setOccupied = function(index) {
+    const currentTime = new Date();
+    const endTime = new Date(currentTime.getTime() + 10000); // 1 minute
+    this.spots[index] = {
+        occupied: true,
+        timeoutEnd: endTime.getTime()
+    };
+    this._commit();
+    this._startTimeout(index, 10000);
 };
 
-// Method to update a specific spot's occupied status
-LotAModel.prototype.setOccupied = function(index, occupied) {
-
-    if (index >= 0 && index < this.spots.length) {
-    
-        this.spots[index].occupied = occupied;
-        
-        this._commit(index, occupied);
-    }
+LotAModel.prototype._startTimeout = function(index, delay) {
+    setTimeout(() => {
+        this.spots[index].occupied = false;
+        this.spots[index].timeoutEnd = null;
+        this._commit();
+        if (typeof view !== 'undefined') {
+            view.updateButton(index, false);
+        }
+    }, delay);
 };
 
-
-// Simulate a commit to the server
-LotAModel.prototype._commit = function(index, occupied) {
-
-    //This will output data from the table in the database of lot A
-    getDatabase();
-
+LotAModel.prototype._commit = function() {
+    console.log(this.spots);
+    localStorage.setItem('parkingSpots', JSON.stringify(this.spots));
 };
 
+LotAModel.prototype.restoreState = function() {
+    const currentTime = new Date().getTime();
+    this.spots.forEach((spot, index) => {
+        if (spot.occupied && spot.timeoutEnd && currentTime < spot.timeoutEnd) {
+            const timeLeft = spot.timeoutEnd - currentTime;
+            this._startTimeout(index, timeLeft);
+        } else {
+            spot.occupied = false;
+            spot.timeoutEnd = null;
+        }
+        if (typeof view !== 'undefined') {
+            view.updateButton(index, spot.occupied);
+        }
+    });
+    this._commit();
+};
