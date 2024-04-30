@@ -1,0 +1,458 @@
+body, html {
+    
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#parking-lot {
+    position: relative;
+    width: 836px; /* Width of the image */
+    height: 541px; /* Height of the image */
+    margin: auto;
+    background: url('LotAFinalPic.GIF') no-repeat center center;
+    background-size: contain;
+}
+
+.parking-spot {
+    font-size: 10px;
+    position: absolute;
+    cursor: pointer;
+    pointer-events: auto;
+    width: auto; /* Width of the spot */
+    height: auto; /* Height of the spot */
+    background-color: #3fff00; 
+    border-radius: 1px;
+    color: black;
+    border: none;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    padding-left: 0.5px;
+    padding-right: 0.5px;
+    
+    
+}
+
+.parking-spot.occupied {
+  background-color: #ff4e4e; /* Red for occupied */
+}
+
+.parking-spot.available {
+  background-color: #3fff00; /* Green for available */
+}
+
+#a1 { 
+    top: 43.4%; 
+    left: 71.25%; 
+}
+#a2 { 
+    top: 43.4%; 
+    left: 69.7%; 
+}
+#a3 { 
+    top: 43.4%; 
+    left: 68%; 
+}
+#a4 { 
+    top: 43.4%; 
+    left: 66.35%; 
+}
+#a5 { 
+    top: 43.4%; 
+    left: 64.7%; 
+}
+#a6 { 
+    top: 43.4%; 
+    left: 63%; 
+}
+#a7 { 
+    top: 52.9%; 
+    left: 71.55%;  
+}
+#a8 { 
+    top: 52.9%; 
+    left: 69.95%;  
+}
+#a9 { 
+    top: 52.9%; 
+    left: 68.35%;  
+}
+#a10 { 
+    top: 52.9%; 
+    left: 66.35%;  
+}
+#a11 { 
+    top: 52.9%; 
+    left: 64.7%;  
+}
+#a12 { 
+    top: 52.9%; 
+    left: 63.05%;  
+}
+#a13 { 
+    top: 52.9%; 
+    left: 61.35%;  
+}
+#a14 { 
+    top: 52.9%; 
+    left: 59.7%;  
+}
+#a15 { 
+    top: 52.9%; 
+    left: 58.05%;  
+}
+#a16 { 
+    top: 52.9%; 
+    left: 56.35%;  
+}
+#a17 { 
+    top: 52.9%; 
+    left: 54.75%;  
+}
+#a18 { 
+    top: 52.9%; 
+    left: 53%;  
+}
+#a19 { 
+    top: 50.6%; 
+    left: 48.7%;  
+}
+#a20 { 
+    top: 58.4%; 
+    left: 46.55%;  
+}
+#a21 { 
+    top: 61%; 
+    left: 46.55%;  
+}
+#a22 { 
+    top: 63.45%; 
+    left: 46.55%;  
+}
+#a23 { 
+    top: 66%; 
+    left: 46.55%;  
+}
+#a24 { 
+    top: 68.5%; 
+    left: 46.55%;  
+}
+#a25 { 
+    top: 71.2%; 
+    left: 46.55%;  
+}
+#a26 { 
+    top: 73.75%; 
+    left: 46.55%;  
+}
+#a27 { 
+    top: 76.35%; 
+    left: 46.55%;  
+}
+#a28 { 
+    top: 78.9%; 
+    left: 46.05%;  
+}
+#a29 { 
+    top: 81.4%; 
+    left: 46.55%;  
+}
+#a30 { 
+    top: 84%; 
+    left: 46.55%;  
+}
+#a31 { 
+    top: 86.55%; 
+    left: 46.55%;  
+}
+#a32 { 
+    top: 89.05%; 
+    left: 46.55%;  
+}
+#a33 { 
+    top: 91.7%; 
+    left: 46.55%;  
+}
+#a34 { 
+    top: 94.2%; 
+    left: 46.55%;  
+}
+#a35 { 
+    top: 94.2%; 
+    left: 39.5%;  
+}
+#a36 { 
+    top: 91.7%; 
+    left: 39.5%;  
+}
+#a37 { 
+    top: 89.15%; 
+    left: 39.5%;  
+}
+#a38 { 
+    top: 86.5%; 
+    left: 39.5%;  
+}
+#a39 { 
+    top: 84%; 
+    left: 39.5%;  
+}
+#a40 { 
+    top: 81.45%; 
+    left: 39.5%;  
+}
+#a41 { 
+    top: 79%; 
+    left: 39.5%;  
+}
+#a42 { 
+    top: 76.35%; 
+    left: 39.5%;  
+}
+#a43 { 
+    top: 73.75%; 
+    left: 39.5%;  
+}
+#a44 { 
+    top: 71.25%; 
+    left: 39.5%;  
+}
+#a45 { 
+    top: 68.7%; 
+    left: 39.5%;  
+}
+#a46 { 
+    top: 66.1%; 
+    left: 39.5%;  
+}
+#a47 { 
+    top: 50.5%; 
+    left: 39%;  
+}
+#a48 { 
+    top: 39.3%; 
+    left: 43.15%;  
+}
+#a49 { 
+    top: 36.8%; 
+    left: 43.15%;  
+}
+#a50 { 
+    top: 34.15%; 
+    left: 43.15%;  
+}
+#a51 { 
+    top: 31.6%; 
+    left: 43.15%;  
+}
+#a52 { 
+    top: 29.1%; 
+    left: 43.85%;  
+}
+#a53 { 
+    top: 26.5%; 
+    left: 43.85%;  
+}
+#a54 { 
+    top: 24%; 
+    left: 43.85%;  
+}
+#a55 { 
+    top: 21.4%; 
+    left: 43.85%;  
+}
+#a56 { 
+    top: 18.9%; 
+    left: 43.15%;  
+}
+#a57 { 
+    top: 16.25%; 
+    left: 43.15%;  
+}
+#a58 { 
+    top: 13.7%; 
+    left: 43.15%;  
+}
+#a59 { 
+    top: 50.5%; 
+    left: 35.4%;  
+}
+#a60 { 
+    top: 39.3%; 
+    left: 36.5%;  
+}
+#a61 { 
+    top: 36.7%; 
+    left: 36.5%;  
+}
+#a62 { 
+    top: 34.2%; 
+    left: 36.5%;  
+}
+#a63 { 
+    top: 31.55%; 
+    left: 36.5%;  
+}
+#a64 { 
+    top: 29%; 
+    left: 36.5%;  
+}
+#a65 { 
+    top: 26.45%; 
+    left: 36.5%;  
+}
+#a66 { 
+    top: 26.45%; 
+    left: 29.3%;  
+}
+#a67 { 
+    top: 29.05%; 
+    left: 29.3%;  
+}
+#a68 { 
+    top: 31.65%; 
+    left: 29.3%;  
+}
+#a69 { 
+    top: 34.1%; 
+    left: 29.3%;  
+}
+#a70 { 
+    top: 36.7%; 
+    left: 29.3%;  
+}
+#a71 { 
+    top: 39.25%; 
+    left: 29.3%;  
+}
+#a72 { 
+    top: 55.9%; 
+    left: 31.6%;  
+}
+#a73 { 
+    top: 58.4%; 
+    left: 31.6%;  
+}
+#a74 { 
+    top: 61%; 
+    left: 31.6%;  
+}
+#a75 { 
+    top: 63.6%; 
+    left: 31.6%;  
+}
+#a76 { 
+    top: 66.2%; 
+    left: 31.6%;  
+}
+#a77 { 
+    top: 68.65%; 
+    left: 31.6%;  
+}
+#a78 { 
+    top: 71.25%; 
+    left: 31.6%;  
+}
+#a79 { 
+    top: 73.75%; 
+    left: 31.6%;  
+}
+#a80 { 
+    top: 76.3%; 
+    left: 31.6%;  
+}
+#a81 { 
+    top: 78.8%; 
+    left: 31.6%;  
+}
+#a82 { 
+    top: 81.4%; 
+    left: 31.6%;  
+}
+#a83 { 
+    top: 84%; 
+    left: 31.6%;  
+}
+#a84 { 
+    top: 86.6%; 
+    left: 31.6%;  
+}
+#a85 { 
+    top: 89.1%; 
+    left: 31.6%;  
+}
+#a86 { 
+    top: 91.7%; 
+    left: 31.6%;  
+}
+#a87 { 
+    top: 94.3%; 
+    left: 31.6%;  
+}
+#a88 {
+    top: 94.3%;
+    left: 25.5%;
+}
+#a89 {
+    top: 91.7%;
+    left: 25.5%;
+}
+#a90 {
+    top: 89.1%;
+    left: 25.5%;
+}
+#a91 {
+    top: 86.6%;
+    left: 25.5%;
+}
+#a92 {
+    top: 84%;
+    left: 25.5%;
+}
+#a93 {
+    top: 81.4%;
+    left: 25.5%;
+}
+#a94 {
+    top: 78.9%;
+    left: 25.5%;
+}
+#a95 {
+    top: 76.3%;
+    left: 25.5%;
+}
+#a96 {
+    top: 73.75%;
+    left: 25.5%;
+}
+#a97 {
+    top: 71.3%;
+    left: 25.5%;
+}
+#a98 {
+    top: 68.7%;
+    left: 25.5%;
+}
+#a99 {
+    top: 66.1%;
+    left: 25.5%;
+}
+#a100 {
+    top: 63.6%;
+    left: 25.3%;
+}
+#a101 {
+    top: 60.99%;
+    left: 25.3%;
+}
+#a102 {
+    top: 58.4%;
+    left: 25.3%;
+}
+#a103 {
+    top: 55.9%;
+    left: 25.3%;
+}
+
+
