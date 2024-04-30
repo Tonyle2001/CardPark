@@ -1,29 +1,32 @@
-var model = new LotAModel();
 
-var view = new LotAView(model);
+function setupListeners(view, model) {
 
-
-// Function to fetch parking spots status from the server
-function fetchParkingSpots() {
-
-    fetch('/api/spots')
+    document.querySelectorAll('.parking-spot').forEach(function(button, index) {
     
-        .then(response => response.json())
+        button.addEventListener('click', function() {
         
-        .then(data => {
-        
-            model.setSpots(data.spots);  // Update model with fetched data
+            if (!model.spots[index].occupied) {
             
-            view.updateAllButtons();     // Update view to reflect the new model state
-        })
-        .catch(error => console.error('Error fetching parking spots:', error));
+                model.setOccupied(index);
+                
+                view.updateButton(index, true);
+            }
+        });
+    });
 }
+const wrapper = document.getElementById('parking-lot');
 
-// Fetch parking spots data when the page loads
-document.addEventListener('DOMContentLoaded', fetchParkingSpots);
-
-// Setup event listeners
-setupListeners(view, model);
-
-
+//Event listener for all buttons within the parking lot
+wrapper.addEventListener('click', (event) => {
+	
+	//Check that what is being clicked is a button, so clicking the div doesn't trigger the dialog.
+	const isButton = event.target.nodeName === 'BUTTON';
+	if(!isButton)
+		return;
+	
+	var ident = event.target.getAttribute('id');
+	
+	window.parent.postMessage(ident, '*');
+	
+});
 
